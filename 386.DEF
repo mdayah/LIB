@@ -1,0 +1,26 @@
+PrintScr.OBJ
+    PrintScreen         'dump text screen to printer
+    PrtSc               'enable or disable print screen key
+    
+
+    Scroll              'scroll up
+    BkScroll            'scroll down
+    LScroll             'scroll left
+    RScroll             'scroll right
+
+
+    EntryD              'date 
+    EntryS              'string    
+    EntryX              'social security
+    EntryT              'telephone 
+    EntryU              'upper case
+    EntryN              'numeric   
+
+    mhMonoOn                                'nova screens black and white
+    mhMonoOff                               'nova screens in color
+    mhBIOSOn                                'BIOS on for nova screens
+    mhBIOSOff                               'BIOS off for nova screens
+    mhOpenScreenLib(Library$, error%)
+    mhFxInfo(Delay%, MonitorSeg%, Snow%)    '
+
+    UnCalcAttr(ForGround%, BackGround%, BYVAL Attribute%)
