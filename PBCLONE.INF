@@ -1,0 +1,3233 @@
+Name: ADDMATI
+Mod : ADDMATI.OBJ
+Decl: DECLARE SUB AddMatI (BYVAL DSeg%, BYVAL DOfs%, BYVAL Elements%, BYVAL AddVal%, ErrCode%)
+Type: Array_Mgmt
+Desc: Add a value to each element of an integer array
+
+Name: ADDMATL
+Mod : ADDMATL.OBJ
+Decl: DECLARE SUB AddMatL (BYVAL DSeg%, BYVAL DOfs%, BYVAL Elements%, AddVal&, ErrCode%)
+Type: Array_Mgmt
+Desc: Add a value to each element of a long integer array
+
+Name: ALLEXTMEM
+Mod : ALLEXTME.OBJ
+Decl: DECLARE FUNCTION AllExtMem& ()
+Type: Equipment
+Desc: Get the amount of extended memory discovered at boot time (kilobytes)
+
+Name: ALTKEY
+Mod : ALTKEY.OBJ
+Decl: DECLARE SUB AltKey (ASCIICode%, ScanCode%, Ky$)
+Type: Input
+Desc: Returns key letter, given ASCII and scan codes of an Alt key combo
+
+Name: ANDST
+Mod : ANDST.OBJ
+Decl: DECLARE SUB AndSt (St1$, St2$)
+Type: String
+Desc: AND the bytes in one string with those in another
+
+Name: ANY2DEC
+Mod : ANY2DEC.OBJ
+Decl: DECLARE SUB Any2Dec (Number$, NumberBase%, DecimalNumber%, ErrCode%)
+Type: Numeric
+Desc: Convert a number from any base to an integer
+
+Name: ASCI
+Mod : ASCI.OBJ
+Decl: DECLARE FUNCTION AscI% (St$)
+Type: String
+Desc: Get the ASCII value of a character (like ASC)
+
+Name: ASCM
+Mod : ASCM.OBJ
+Decl: DECLARE FUNCTION AscM% (St$, BYVAL Posn%)
+Type: String
+Desc: Get the ASCII value of any character in a string
+
+Name: BARMENU
+Mod : BARMENU.OBJ
+Decl: DECLARE SUB BarMenu (PickList$(), Row%, LeftCol%, RightCol%, VAttr%, HiAttr%, Prompt$)
+Type: Input
+Desc: Bar menu (keyboard only)
+
+Name: BARMENUM
+Mod : BARMENUM.OBJ
+Decl: DECLARE SUB BarMenuM (PickList$(), Row%, LeftCol%, RightCol%, VAttr%, HiAttr%, Prompt$, Mouse%, ShowCursor%)
+Type: Input Mouse
+Desc: Bar menu (keyboard or mouse)
+
+Name: BICKEL
+Mod : BICKEL.OBJ
+Decl: DECLARE SUB Bickel (St1$, St2$, Result%)
+Type: String
+Desc: Compare two strings using Bickel's algorithm
+
+Name: BIGPRINT
+Mod : BIGPRINT.OBJ
+Decl: DECLARE SUB BigPrint (St$, PixelCh$, BYVAL Row%, BYVAL Column%, BYVAL VAttr%)
+Type: Display
+Desc: Display text in huge letters
+
+Name: BINSEEKD
+Mod : BINSEEKD.OBJ
+Decl: DECLARE SUB BinSeekD (Array#(), Elements%, Target#, Posn%)
+Type: Array_Mgmt
+Desc: Binary search an array of double-precision numbers
+
+Name: BINSEEKI
+Mod : BINSEEKI.OBJ
+Decl: DECLARE SUB BinSeekI (Array%(), Elements%, Target%, Posn%)
+Type: Array_Mgmt
+Desc: Binary search an array of integers
+
+Name: BINSEEKL
+Mod : BINSEEKL.OBJ
+Decl: DECLARE SUB BinSeekL (Array&(), Elements%, Target&, Posn%)
+Type: Array_Mgmt
+Desc: Binary search an array of long integers
+
+Name: BINSEEKS
+Mod : BINSEEKS.OBJ
+Decl: DECLARE SUB BinSeekS (Array!(), Elements%, Target!, Posn%)
+Type: Array_Mgmt
+Desc: Binary search an array of single-precision numbers
+
+Name: BINSEEKST
+Mod : BINSEKST.OBJ
+Decl: DECLARE SUB BinSeekSt (Array$(), Elements%, Target$, CapsCount%, Posn%)
+Type: Array_Mgmt
+Desc: Binary search an array of strings
+
+Name: BIOSINKEY
+Mod : BIOSINKY.OBJ
+Decl: DECLARE SUB BIOSInkey (AscCode%, ScanCode%)
+Type: Input
+Desc: Get a key, if any awaits, using BIOS services
+
+Name: BKSCROLL
+Mod : SCROLL.OBJ
+Decl: DECLARE SUB BkScroll (BYVAL TopRow%, BYVAL LeftCol%, BYVAL BottomRow%, BYVAL RightCol%, BYVAL Times%)
+Type: Display
+Desc: Scroll an area of the screen down
+
+Name: BKSPACE
+Mod : BKSPACE.OBJ
+Decl: DECLARE SUB BkSpace (Row%, Column%)
+Type: Display
+Desc: Backspace destructively, wrapping to the previous line if need be
+
+Name: BLINK
+Mod : BLINK.OBJ
+Decl: DECLARE SUB Blink (BYVAL SetBlink%)
+Type: Display
+Desc: Switch between intense background colors and blinking
+
+Name: BLOCKMOVE
+Mod : BLOCKMOV.OBJ
+Decl: DECLARE SUB BlockMove (BYVAL FromSeg%, BYVAL FromOfs%, BYVAL ToSeg%, BYVAL ToOfs%, Bytes&, BYVAL Direction%)
+Type: Memory
+Desc: Copy data from one area of memory to another
+
+Name: BOOTDRIVE
+Mod : BOOTDRV.OBJ
+Decl: DECLARE SUB BootDrive (Drive$)
+Type: Disk
+Desc: Determine the drive used to boot the computer
+
+Name: BOOTDRIVE2
+Mod : BOOTDRV2.OBJ
+Decl: DECLARE FUNCTION BootDrive2$ ()
+Type: Disk
+Desc: Determine the drive used to boot the computer
+
+Name: BREAD
+Mod : BREAD.OBJ
+Decl: DECLARE SUB BRead (BYVAL FileHandle%, Value%, ErrCode%)
+Type: Disk
+Desc: Read a byte from a file into an integer
+
+Name: BREAKCHECK
+Mod : BREAKOFF.OBJ
+Decl: DECLARE FUNCTION BreakCheck% ()
+Type: Input
+Desc: See whether Break has been pressed (used after BreakOff)
+
+Name: BREAKOFF
+Mod : BREAKOFF.OBJ
+Decl: DECLARE SUB BreakOff ()
+Type: Input
+Desc: Make sure Break doesn't interrupt your program
+
+Name: BREAKOFFDONE
+Mod : BREAKOFF.OBJ
+Decl: DECLARE SUB BreakOffDone ()
+Type: Input
+Desc: Turn off Break handling (used after BreakOff)
+
+Name: BSQ
+Mod : BSQ.OBJ
+Decl: DECLARE SUB BSq (St$, StLen%)
+Type: String
+Desc: Compress the blanks out of a text string
+
+Name: BUSQ
+Mod : BUSQ.OBJ
+Decl: DECLARE SUB BUsq (St$, Result$)
+Type: String
+Desc: Restore a string that was compressed by BSq
+
+Name: BUSQLEN
+Mod : BUSQLEN.OBJ
+Decl: DECLARE SUB BUsqLen (St$, StLen%)
+Type: String
+Desc: Determine the expanded length of a string compressed by BSq
+
+Name: BWRITE
+Mod : BWRITE.OBJ
+Decl: DECLARE SUB BWrite (BYVAL FileHandle%, Value&, ErrCode%)
+Type: Disk
+Desc: Write a byte to a file from an integer
+
+Name: CALCATTR
+Mod : CALCATTR.OBJ
+Decl: DECLARE SUB CalcAttr (BYVAL Foreground%, BYVAL Background%, VAttr%)
+Type: Display
+Desc: Calculate a color/attribute from foreground and background colors
+
+Name: CALCATTR2
+Mod : CALCATT2.OBJ
+Decl: DECLARE FUNCTION CalcAttr2% (BYVAL Foreground%, BYVAL Background%)
+Type: Display
+Desc: Calculate a color/attribute from foreground and background colors
+
+Name: CALCDATE
+Mod : CALCDATE.OBJ
+Decl: DECLARE SUB CalcDate (StartDate$, Days&, Direction%, NewDate$, ErrCode%)
+Type: Time
+Desc: Return the date a given number of days from a starting date
+
+Name: CALCSIZE
+Mod : CALCSIZE.OBJ
+Decl: DECLARE SUB CalcSize (BYVAL TopRow%, BYVAL LeftCol%, BYVAL BottomRow%, BYVAL RightCol%, Elements%)
+Type: Display
+Desc: Calculate the array size needed to save an area of the screen
+
+Name: CALCVGACOLOR
+Mod : CALCVGA.OBJ
+Decl: DECLARE SUB CalcVGAColor (BYVAL Red%, BYVAL Green%, BYVAL Blue%, Colour&)
+Type: Display
+Desc: Calculate a VGA palette setting
+
+Name: CARRIER
+Mod : CARRIER.OBJ
+Decl: DECLARE SUB Carrier (BYVAL CommPort%, CarrierHigh%)
+Type: Serial
+Desc: Determine whether a carrier is present (for use with modems)
+
+Name: CATCHERROR
+Mod : GETERROR.OBJ
+Decl: DECLARE SUB CatchError ()
+Type: Miscellaneous
+Desc: Get ready to grab the exit code from a SHELLed program
+
+Name: CDROM
+Mod : CDROM.OBJ
+Decl: DECLARE SUB CDROM (FirstDrive$, LogicalDrives%)
+Type: Disk Equipment
+Desc: See if a CD-ROM is installed and get information about it
+
+Name: CDROM2
+Mod : CDROM2.OBJ
+Decl: DECLARE FUNCTION CDROM2% ()
+Type: Disk Equipment
+Desc: See if a CD-ROM is installed and get information about it
+
+Name: CEILD
+Mod : CEILD.OBJ
+Decl: DECLARE FUNCTION CeilD# (Nr#)
+Type: Numeric
+Desc: Return the smallest integer greater than or equal to a number
+
+Name: CEILS
+Mod : CEILS.OBJ
+Decl: DECLARE FUNCTION CeilS! (Nr!)
+Type: Numeric
+Desc: Return the smallest integer greater than or equal to a number
+
+Name: CENTERST
+Mod : CENTERST.OBJ
+Decl: DECLARE FUNCTION CenterSt$ (StToCenter$, Columns%)
+Type: String
+Desc: Center a string
+
+Name: CHECKDATE
+Mod : CHECKDAT.OBJ
+Decl: DECLARE SUB CheckDate (BYVAL MonthNr%, BYVAL DayNr%, BYVAL YearNr%, ErrCode%)
+Type: Time
+Desc: Determine whether a given date is valid
+
+Name: CHECKDISK
+Mod : CHECKDSK.OBJ
+Decl: DECLARE SUB CheckDisk (Drive$, ErrCode%)
+Type: Disk
+Desc: See if a disk is ready to be accessed
+
+Name: CHECKDSK
+Mod : CHEKDSK.OBJ
+Decl: DECLARE FUNCTION CheckDsk% (Drive$)
+Type: Disk
+Desc: See if a disk is ready to be accessed
+
+Name: CHECKKEY
+Mod : CHECKKEY.OBJ
+Decl: DECLARE SUB CheckKey (Mouse%, ASCIICode%, ScanCode%, LeftButton%, RightButton%)
+Type: Input Mouse
+Desc: Get a key, if one awaits, or a mouse button press (2-button mouse)
+
+Name: CHECKKEY3
+Mod : CHECKKY3.OBJ
+Decl: DECLARE SUB CheckKey3 (Mouse%, ASCIICode%, ScanCode%, LeftButton%, MiddleButton%, RightButton%)
+Type: Input Mouse
+Desc: Get a key, if one awaits, or a mouse button press (3-button mouse)
+
+Name: CHECKSHARE
+Mod : CHKSHARE.OBJ
+Decl: DECLARE SUB CheckShare (ShareActive%)
+Type: Disk
+Desc: See if SHARE is installed
+
+Name: CHECKSHARE2
+Mod : CHKSHAR2.OBJ
+Decl: DECLARE FUNCTION CheckShare2% ()
+Type: Disk
+Desc: See if SHARE is installed
+
+Name: CHECKSUM
+Mod : CHECKSUM.OBJ
+Decl: DECLARE SUB Checksum (St$, ChkSum%)
+Type: Numeric Serial
+Desc: Calculate a checksum on a string (works with Xmodem/Ymodem)
+
+Name: CIPHER
+Mod : CIPHER.OBJ
+Decl: DECLARE SUB Cipher (St$, Password$)
+Type: String
+Desc: Perform simple string encryption/decryption
+
+Name: CIPHERP
+Mod : CIPHERP.OBJ
+Decl: DECLARE SUB CipherP (St$, Password$)
+Type: String
+Desc: Perform simple string encryption/decryption, with printable results
+
+Name: CLEARAREA
+Mod : CLRAREA.OBJ
+Decl: DECLARE SUB ClearArea (TopRow%, LeftCol%, BottomRow%, RightCol%, VAttr%, Fast%)
+Type: Display
+Desc: Clear an area of the screen with a twinkling effect
+
+Name: CLOCK
+Mod : CLOCK.OBJ
+Decl: DECLARE SUB Clock (BYVAL DisplayOn%)
+Type: Display Time
+Desc: Keep a clock displayed on the screen
+
+Name: CLOCKSET
+Mod : CLOCK.OBJ
+Decl: DECLARE SUB ClockSet (BYVAL MilitaryTime%, BYVAL ShowSecs%, BYVAL UpdateFreq%, BYVAL Row%, BYVAL Col%, BYVAL VAttr%, BYVAL Fast%)
+Type: Display Time
+Desc: Set various parameters for the Clock routine
+
+Name: CLOSEA
+Mod : ARC00.OBJ
+Decl: DECLARE SUB CloseA ()
+Type: Disk
+Desc: Close an archive opened by FindFirstA
+
+Name: CLRCOLS
+Mod : CLRCOLS.OBJ
+Decl: DECLARE SUB ClrCols (BYVAL StartColumn%, BYVAL EndColumn%)
+Type: Display
+Desc: Clear between specified columns on the current row
+
+Name: CLREOL
+Mod : CLREOL.OBJ
+Decl: DECLARE SUB ClrEOL ()
+Type: Display
+Desc: Clear from the cursor to the end of the line
+
+Name: CLREOP
+Mod : CLREOP.OBJ
+Decl: DECLARE SUB ClrEOP ()
+Type: Display
+Desc: Clear from the cursor to the end of the page
+
+Name: CLRKBD
+Mod : CLRKBD.OBJ
+Decl: DECLARE SUB ClrKbd ()
+Type: Input
+Desc: Clear the keyboard buffer
+
+Name: CLRSOL
+Mod : CLRSOL.OBJ
+Decl: DECLARE SUB ClrSOL ()
+Type: Display
+Desc: Clear from the start of the line to the cursor
+
+Name: CLRSOP
+Mod : CLRSOP.OBJ
+Decl: DECLARE SUB ClrSOP ()
+Type: Display
+Desc: Clear from the start of the page to the cursor
+
+Name: COPYFILE
+Mod : COPYFILE.OBJ
+Decl: DECLARE SUB CopyFile (FromFile$, ToFile$, ErrCode%)
+Type: Disk
+Desc: Copy a single file
+
+Name: CPRINTSCREEN1
+Mod : CPRINTSC.OBJ
+Decl: DECLARE SUB CPrintScreen1 ()
+Type: Display Printer
+Desc: Send a SCREEN 1 display to the printer
+
+Name: CPRINTSCREEN2
+Mod : CPRINTSC.OBJ
+Decl: DECLARE SUB CPrintScreen2 ()
+Type: Display Printer
+Desc: Send a SCREEN 2 display to the printer
+
+Name: CPUSPEED
+Mod : CPUSPEED.OBJ
+Decl: DECLARE FUNCTION CPUSpeed% ()
+Type: Equipment
+Desc: Estimate the CPU speed, in MHz
+
+Name: CRC
+Mod : CRC.OBJ
+Decl: DECLARE SUB CRC (St$, CRCmsb%, CRClsb%)
+Type: Serial String
+Desc: Calculate a CRC for a string (works with Xmodem/Ymodem) (obsolete)
+
+Name: CRC1
+Mod : CRC1.OBJ
+Decl: DECLARE SUB CRC1 (St$, CRCmsb%, CRClsb%)
+Type: Serial String
+Desc: Calculate a CRC for a string (works with Xmodem/Ymodem)
+
+Name: CRUNCH
+Mod : CRUNCH.OBJ
+Decl: DECLARE SUB Crunch (St$, Ch$, StLen%)
+Type: String
+Desc: Remove repeated values from a string
+
+Name: CTRLKEY
+Mod : CTRLKEY.OBJ
+Decl: DECLARE SUB CtrlKey (ASCIICode%, Ky$)
+Type: Input
+Desc: Return key letter, given ASCII and scan codes of a Ctrl key combo
+
+Name: CURSORINFO
+Mod : CURSOR.OBJ
+Decl: DECLARE SUB CursorInfo (Visible%, StartLine%, EndLine%, MaxLine%)
+Type: Display
+Desc: Return cursor visibility, current size/shape, and maximum size
+
+Name: CWINDOWMANAGER
+Mod : CWINDMAN.OBJ
+Decl: DECLARE SUB CWindowManager (TopRow%, LeftCol%, BottomRow%, RightCol%, Frame%, Fore%, Back%, Grow%, Shade%, TFore%, Title$, Fast%)
+Type: Display
+Desc: Display a pop-up window on a CGA graphics screen
+
+Name: DATASEG
+Mod : DATASEG.OBJ
+Decl: DECLARE SUB DataSeg (DSeg%)
+Type: Memory
+Desc: Determine the default data segment ("dgroup")
+
+Name: DATE2INT
+Mod : DATE2INT.OBJ
+Decl: DECLARE SUB Date2Int (BYVAL MonthNr%, BYVAL DayNr%, BYVAL YearNr%, SqueezedDate%)
+Type: Time
+Desc: Compress a date into a single integer
+
+Name: DATEA2R
+Mod : DATEA2R.OBJ
+Decl: DECLARE SUB DateA2R (BYVAL MonthNr%, BYVAL DayNr%, BYVAL YearNr%, RelDate&)
+Type: Time
+Desc: Convert a date into a number that can be used in calculations
+
+Name: DATEN2S
+Mod : DATEN2S.OBJ
+Decl: DECLARE SUB DateN2S (MonthNr%, DayNr%, YearNr%, DateSt$)
+Type: Time
+Desc: Convert a date from numbers to a string
+
+Name: DATER2A
+Mod : DATER2A.OBJ
+Decl: DECLARE SUB DateR2A (MonthNr%, DayNr%, YearNr%, RelDate&)
+Type: Time
+Desc: Convert a number into a date
+
+Name: DATES2N
+Mod : DATES2N.OBJ
+Decl: DECLARE SUB DateS2N (MonthNr%, DayNr%, YearNr%, DateSt$)
+Type: Time
+Desc: Convert a date from a string into numbers
+
+Name: DCAL
+Mod : DCAL.OBJ
+Decl: DECLARE SUB DCal (Scrn%(), CalDate$)
+Type: Time
+Desc: Draw a calendar in a virtual screen (can be displayed by ScrRest)
+
+Name: DCALENDAR
+Mod : DCALENDA.OBJ
+Decl: DECLARE SUB DCalendar (Scrn%(), CalDate$, Page%, Fast%)
+Type: Time
+Desc: Draw a calendar and allow user input to select different dates
+
+Name: DCLEAR
+Mod : DCLEAR.OBJ
+Decl: DECLARE SUB DClear (BYVAL DSeg%, BYVAL DOfs%, BYVAL VAttr%)
+Type: Display
+Desc: Clear a virtual screen
+
+Name: DCLEARSS
+Mod : DCLEARSS.OBJ
+Decl: DECLARE SUB DClearSS (BYVAL DSeg%, BYVAL DOfs%, BYVAL VAttr%, BYVAL Rows%, BYVAL Columns%)
+Type: Display
+Desc: Clear a virtual screen of a nonstandard size
+
+Name: DEC2ANY
+Mod : DEC2ANY.OBJ
+Decl: DECLARE SUB Dec2Any (DecimalNumber%, NumberBase%, Number$, NumberLen%)
+Type: Numeric
+Desc: Convert an integer to any base
+
+Name: DELAY
+Mod : DELAY.OBJ
+Decl: DECLARE SUB Delay (BYVAL Seconds%)
+Type: Time
+Desc: Delay for a given number of seconds
+
+Name: DELAY18TH
+Mod : DELAY18.OBJ
+Decl: DECLARE SUB Delay18th (BYVAL WaitTime%)
+Type: Time
+Desc: Delay for a given number of 18ths of seconds
+
+Name: DELAYV
+Mod : DELAYV.OBJ
+Decl: DECLARE SUB DelayV (BYVAL MilliSeconds%)
+Type: Time
+Desc: Delay for a given number of milliseconds (approximate)
+
+Name: DELCHR
+Mod : CHAR.OBJ
+Decl: DECLARE SUB DelChr (BYVAL Row%, BYVAL Column%)
+Type: Display
+Desc: Delete a character from the screen
+
+Name: DELFILE
+Mod : DELFILE.OBJ
+Decl: DECLARE SUB DelFile (FileName$, ErrCode%)
+Type: Disk
+Desc: Delete a file
+
+Name: DELLINE
+Mod : LINE.OBJ
+Decl: DECLARE SUB DelLine (BYVAL Row%, BYVAL VAttr%)
+Type: Display
+Desc: Delete a row from the screen
+
+Name: DELSUB
+Mod : DELSUB.OBJ
+Decl: DECLARE SUB DelSub (Subdir$, ErrCode%)
+Type: Disk
+Desc: Delete a subdirectory
+
+Name: DFREAD
+Mod : DFREAD.OBJ
+Decl: DECLARE SUB DFRead (BYVAL FileHandle%, BYVAL DSeg%, BYVAL DOfs%, BYVAL Bytes%, BytesRead%, ErrCode%)
+Type: Disk
+Desc: Read from a file into an array
+
+Name: DFWRITE
+Mod : DFWRITE.OBJ
+Decl: DECLARE SUB DFWrite (BYVAL FileHandle%, BYVAL DSeg%, BYVAL DOfs%, BYVAL Bytes%, BytesWrit%, ErrCode%)
+Type: Disk
+Desc: Write to a file from an array
+
+Name: DGCLEAR
+Mod : DGCLEAR.OBJ
+Decl: DECLARE SUB DGClear (BYVAL DSeg%, BYVAL DOfs%, BYVAL Colour%)
+Type: Display
+Desc: Clear a CGA graphics virtual screen
+
+Name: DGETREC
+Mod : DGETREC.OBJ
+Decl: DECLARE SUB DGetRec (BYVAL DSeg%, BYVAL DOfs%, BYVAL RecNr%, St$)
+Type: Memory String
+Desc: Get a string from memory
+
+Name: DGETSCREEN
+Mod : DGETSCR.OBJ
+Decl: DECLARE SUB DGetScreen (BYVAL DSeg%, BYVAL DOfs%, BYVAL TopRow%, BYVAL LeftCol%, BYVAL BottomRow%, BYVAL RightCol%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Get an area of the screen into an array
+
+Name: DGETST
+Mod : DGETST.OBJ
+Decl: DECLARE SUB DGetSt (BYVAL DSeg%, BYVAL DOfs%, Posn&, St$)
+Type: Memory String
+Desc: Get a string from memory
+
+Name: DGQPRINT
+Mod : DGQPRINT.OBJ
+Decl: DECLARE SUB DGQPrint (BYVAL DSeg%, BYVAL DOfs%, St$, BYVAL Row%, BYVAL Column%)
+Type: Display
+Desc: Display text to a CGA graphics (SCREEN 1) virtual screen
+
+Name: DGXQPRINT
+Mod : DGXQPRIN.OBJ
+Decl: DECLARE SUB DGXQPrint (BYVAL DSeg%, BYVAL DOfs%, St$, BYVAL Row%, BYVAL Col%, BYVAL Fore%)
+Type: Display
+Desc: Display text to a CGA graphics (SCREEN 2) virtual screen
+
+Name: DGXQPRINT1
+Mod : DGXQPRI1.OBJ
+Decl: DECLARE SUB DGXQPrint1 (BYVAL DSeg%, BYVAL DOfs%, St$, BYVAL Row%, BYVAL Col%, BYVAL Fore%, BYVAL Back%)
+Type: Display
+Desc: Display text to a CGA graphics (SCREEN 2) virtual screen
+
+Name: DINPUT
+Mod : DINPUT.OBJ
+Decl: DECLARE SUB DInput (Format$, St&, St$, MinusOk%, VAttr%, ExitCode%)
+Type: Input
+Desc: Formatted dollar input routine
+
+Name: DISKSTAT
+Mod : DISKSTAT.OBJ
+Decl: DECLARE SUB DiskStat (Drive$, FreeClus&, TotalClus&, BytesPerSec%, SecsPerClus%)
+Type: Disk
+Desc: Get information about a disk
+
+Name: DISSOLVE
+Mod : DISSOLVE.OBJ
+Decl: DECLARE SUB Dissolve (BYVAL VAttr%)
+Type: Display
+Desc: Clear the screen with a "dissolve" effect
+
+Name: DMPRINT
+Mod : DMPRINT.OBJ
+Decl: DECLARE SUB DMPrint (St$)
+Type: Display
+Desc: Display text directly through DOS services
+
+Name: DOSCLREOL
+Mod : DOSCLREO.OBJ
+Decl: DECLARE SUB DOSClrEol ()
+Type: Display
+Desc: Clear from the cursor to the end of the line using ANSI
+
+Name: DOSCLS
+Mod : DOSCLS.OBJ
+Decl: DECLARE SUB DOSCls ()
+Type: Display
+Desc: Clear the screen using DOS services and ANSI
+
+Name: DOSCOLOR
+Mod : DOSCOLOR.OBJ
+Decl: DECLARE SUB DOSColor (BYVAL Fore%, BYVAL Back%)
+Type: Display
+Desc: Set the screen colors using DOS services and ANSI
+
+Name: DOSERRM
+Mod : DOSERRM.OBJ
+Decl: DECLARE FUNCTION DOSErrM$ (BYVAL ErrCode%)
+Type: Miscellaneous
+Desc: Convert a DOS error code into a text string
+
+Name: DOSINKEY
+Mod : DOSINKEY.OBJ
+Decl: DECLARE SUB DOSInkey (CharCode%, CharType%)
+Type: Input
+Desc: Get a key, if any awaits, using DOS services
+
+Name: DOSINKY
+Mod : DOSINKY.OBJ
+Decl: DECLARE FUNCTION DOSInky$ ()
+Type: Input
+Desc: Get a key, if any awaits, using DOS services
+
+Name: DOSINT
+Mod : DOSINT.OBJ
+Decl: DECLARE FUNCTION DOSInt% (AX%, BX%, CX%, DX%, DS%)
+Type: Miscellaneous
+Desc: Execute a DOS function (like CALL INTERRUPT)
+
+Name: DOSLOCATE
+Mod : DOSLOCAT.OBJ
+Decl: DECLARE SUB DOSLocate (BYVAL Row%, BYVAL Column%)
+Type: Display
+Desc: Set the cursor position using DOS services and ANSI
+
+Name: DPUTREC
+Mod : DPUTREC.OBJ
+Decl: DECLARE SUB DPutRec (BYVAL DSeg%, BYVAL DOfs%, BYVAL RecNr%, St$)
+Type: Memory String
+Desc: Put a string into memory
+
+Name: DPUTSCREEN
+Mod : DPUTSCR.OBJ
+Decl: DECLARE SUB DPutScreen (BYVAL DSeg%, BYVAL DOfs%, BYVAL TopRow%, BYVAL LeftCol%, BYVAL BottomRow%, BYVAL RightCol%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Put text from an array onto an area of the screen
+
+Name: DPUTST
+Mod : DPUTST.OBJ
+Decl: DECLARE SUB DPutSt (BYVAL DSeg%, BYVAL DOfs%, Posn&, St$)
+Type: Memory String
+Desc: Put a string into memory
+
+Name: DRECDEL
+Mod : DRECDEL.OBJ
+Decl: DECLARE SUB DRecDel (BYVAL DSeg%, BYVAL DOfs%, BYVAL RecNum%, BYVAL RecLen%, BYVAL TotalRecs%)
+Type: Array_Mgmt
+Desc: Delete a record or element from an array
+
+Name: DRECINS
+Mod : DRECINS.OBJ
+Decl: DECLARE SUB DRecIns (BYVAL DSeg%, BYVAL DOfs%, BYVAL RecNum%, BYVAL RecLen%, BYVAL TotalRecs%)
+Type: Array_Mgmt
+Desc: Insert a record or element into an array
+
+Name: DRECOLOR
+Mod : DRECOLOR.OBJ
+Decl: DECLARE SUB DReColor (BYVAL DSeg%, BYVAL DOfs%, BYVAL OldAttr%, BYVAL NewAttr%)
+Type: Display
+Desc: Change text from one color to another in a virtual screen
+
+Name: DRECOLORAREA
+Mod : DRECOLRA.OBJ
+Decl: DECLARE SUB DReColorArea (BYVAL DSeg%, BYVAL DOfs%, BYVAL TopRow%, BYVAL LeftCol%, BYVAL BottomRow%, BYVAL RightCol%, BYVAL VAttr%)
+Type: Display
+Desc: Change a block of text to a specified color in a virtual screen
+
+Name: DRIVESPACE
+Mod : DRIVESPC.OBJ
+Decl: DECLARE FUNCTION DriveSpace& (Drive$)
+Type: Disk
+Desc: See how much space is free on a disk
+
+Name: DRVSPACEL
+Mod : DRVSPACL.OBJ
+Decl: DECLARE SUB DrvSpaceL (Drive$, BytesFree&)
+Type: Disk
+Desc: See how much space is free on a disk
+
+Name: DRVTYPE
+Mod : DRVTYPE.OBJ
+Decl: DECLARE SUB DrvType (Drive$, Removeable%, Remote%, ErrCode%)
+Type: Disk
+Desc: See if a drive is removeable and/or networked
+
+Name: DSCRREST
+Mod : DSCRREST.OBJ
+Decl: DECLARE SUB DScrRest (BYVAL DSeg%, BYVAL DOfs%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Restore a saved screen from an array
+
+Name: DSCRSAVE
+Mod : DSCRSAVE.OBJ
+Decl: DECLARE SUB DScrSave (BYVAL DSeg%, BYVAL DOfs%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Save a screen into an array
+
+Name: DTR
+Mod : DTR.OBJ
+Decl: DECLARE SUB DTR (BYVAL CommPort%, BYVAL SetHigh%)
+Type: Serial
+Desc: Set the state of the DTR line
+
+Name: DUPEVAR
+Mod : DUPEVAR.OBJ
+Decl: DECLARE SUB DupeVar (FirstVar AS ANY, SecondVar AS ANY)
+Type: Miscellaneous
+Desc: Copy one variable (any type) to another of the same length
+
+Name: DWINDOWMAN2
+Mod : DWINMAN2.OBJ
+Decl: DECLARE SUB DWindowMan2 (DSeg%, DOfs%, TopRow%, LeftCol%, BottomRow%, RightCol%, Frame%, FSt$, Fore%, Back%, Grow%, Shade%, TFore%, Title$)
+Type: Display
+Desc: Display a pop-up window with user-defined frames in a virtual screen
+
+Name: DWINDOWMAN3
+Mod : DWINMAN3.OBJ
+Decl: DECLARE SUB DWindowMan3 (DSeg%, DOfs%, ParmList%(), Title$)
+Type: Display
+Desc: Display a pop-up window in a virtual screen
+
+Name: DWINDOWMAN4
+Mod : DWINMAN4.OBJ
+Decl: DECLARE SUB DWindowMan4 (DSeg%, DOfs%, TopRow%, LeftCol%, BottomRow%, RightCol%, Frame%, VAttr%)
+Type: Display
+Desc: Display a window frame in a virtual screen
+
+Name: DWINDOWMANAGER
+Mod : DWINMAN.OBJ
+Decl: DECLARE SUB DWindowManager (DSeg%, DOfs%, TopRow%, LeftCol%, BottomRow%, RightCol%, Frame%, Fore%, Back%, Grow%, Shade%, TFore%, Title$)
+Type: Display
+Desc: Display a pop-up window in a virtual screen
+
+Name: DXQPRINT
+Mod : DXQPRINT.OBJ
+Decl: DECLARE SUB DXQPrint (BYVAL DSeg%, BYVAL DOfs%, St$, BYVAL Row%, BYVAL Column%, BYVAL VAttr%)
+Type: Display
+Desc: Display text on a virtual screen
+
+Name: EGAREST7
+Mod : EGAREST7.OBJ
+Decl: DECLARE SUB EGARest7 (BYVAL DSeg%, BYVAL DOfs%)
+Type: Display
+Desc: Restore a saved EGA graphics display (SCREEN 7)
+
+Name: EGAREST8
+Mod : EGAREST8.OBJ
+Decl: DECLARE SUB EGARest8 (BYVAL DSeg%, BYVAL DOfs%)
+Type: Display
+Desc: Restore a saved EGA graphics display (SCREEN 8)
+
+Name: EGAREST9
+Mod : EGAREST9.OBJ
+Decl: DECLARE SUB EGARest9 (BYVAL DSeg1%, BYVAL DOfs1%, BYVAL DSeg2%, BYVAL DOfs2%)
+Type: Display
+Desc: Restore a saved EGA graphics display (SCREEN 9)
+
+Name: EGASAVE7
+Mod : EGASAVE7.OBJ
+Decl: DECLARE SUB EGASave7 (BYVAL DSeg%, BYVAL DOfs%)
+Type: Display
+Desc: Save an EGA graphics display (SCREEN 7)
+
+Name: EGASAVE8
+Mod : EGASAVE8.OBJ
+Decl: DECLARE SUB EGASave8 (BYVAL DSeg%, BYVAL DOfs%)
+Type: Display
+Desc: Save an EGA graphics display (SCREEN 7)
+
+Name: EGASAVE9
+Mod : EGASAVE9.OBJ
+Decl: DECLARE SUB EGASave9 (BYVAL DSeg1%, BYVAL DOfs1%, BYVAL DSeg2%, BYVAL DOfs2%)
+Type: Display
+Desc: Save an EGA graphics display (SCREEN 7)
+
+Name: ELAPSED
+Mod : ELAPSED.OBJ
+Decl: DECLARE SUB Elapsed (TimeStart$, TimeStop$, ElapsedT$)
+Type: Time
+Desc: Determine the time elapsed between two times
+
+Name: ELAPSEDTIME
+Mod : ELAPSEDT.OBJ
+Decl: DECLARE FUNCTION ElapsedTime$ (TimeStart$, TimeStop$)
+Type: Time
+Desc: Determine the time elapsed between two times
+
+Name: EMSBUFFER
+Mod : EMSARRAY.OBJ
+Decl: DECLARE SUB EMSBuffer (Bytes%)
+Type: Memory
+Desc: Get the bytes needed to save the EMS array state
+
+Name: EMSCLOSE
+Mod : EMSARRAY.OBJ
+Decl: DECLARE SUB EMSClose (BYVAL ArrayHandle%)
+Type: Memory
+Desc: Close an EMS array
+
+Name: EMSGET
+Mod : EMSARRAY.OBJ
+Decl: DECLARE SUB EMSGet (BYVAL ArrayHandle%, ElementNr&, Value AS ANY)
+Type: Memory
+Desc: Get an element from an EMS array
+
+Name: EMSOPEN
+Mod : EMSARRAY.OBJ
+Decl: DECLARE SUB EMSOpen (Elements&, ElementType%, ArrayHandle%, ErrCode%)
+Type: Memory
+Desc: Create an EMS array (like DIM)
+
+Name: EMSPUT
+Mod : EMSARRAY.OBJ
+Decl: DECLARE SUB EMSPut (BYVAL ArrayHandle%, ElementNr&, Value AS ANY)
+Type: Memory
+Desc: Put an element into an EMS array
+
+Name: EMSREST
+Mod : EMSARRAY.OBJ
+Decl: DECLARE SUB EMSRest (ArrayState$)
+Type: Memory
+Desc: Restore a saved EMS array state
+
+Name: EMSSAVE
+Mod : EMSARRAY.OBJ
+Decl: DECLARE SUB EMSSave (ArrayState$)
+Type: Memory
+Desc: Save the EMS array state
+
+Name: ENHKBD
+Mod : ENHKBD.OBJ
+Decl: DECLARE SUB EnhKbd (BYVAL Enable%)
+Type: Input
+Desc: Enable or disable enhanced (101-key) keyboard support
+
+Name: EQUIPMENT
+Mod : EQUIPMNT.OBJ
+Decl: DECLARE SUB Equipment (Memory%, Parallel%, Serial%, Game%)
+Type: Equipment
+Desc: Get basic equipment info (memory and ports)
+
+Name: EUROPEDATE
+Mod : EURODATE.OBJ
+Decl: DECLARE SUB EuropeDate (DateSt$, FormatSt$, Result$, ErrCode%)
+Type: Time
+Desc: Convert a date to European format
+
+Name: EWINDOWMANAGERC
+Mod : EWINDMAC.OBJ
+Decl: DECLARE SUB EWindowManagerC (TopRow%, LeftCol%, BottomRow%, RightCol%, Frame%, Fore%, Back%, Grow%, Shade%, S1%, S2%, TFore%, Title$)
+Type: Display
+Desc: Display a pop-up window on an EGA or VGA graphics screen
+
+Name: EXIST
+Mod : EXIST.OBJ
+Decl: DECLARE SUB Exist (File$, Found%)
+Type: Disk
+Desc: See if a file exists
+
+Name: EXIST2
+Mod : EXIST2.OBJ
+Decl: DECLARE FUNCTION Exist2% (FileName$)
+Type: Disk
+Desc: See if a file exists
+
+Name: EXPLAINFATTR
+Mod : EXPLATTR.OBJ
+Decl: DECLARE FUNCTION ExplainFAttr$ (FAttr%, AbbrevLevel%)
+Type: Disk
+Desc: Return a string explaining what a file attribute means
+
+Name: EXQPRINTC
+Mod : EXQPRINC.OBJ
+Decl: DECLARE SUB EXQPrintC (St$, BYVAL Row%, BYVAL Column%, BYVAL Fore%, BYVAL Back%)
+Type: Display
+Desc: Display text on an EGA or VGA graphics screen
+
+Name: EXTENDFSPEC
+Mod : EXTFSPEC.OBJ
+Decl: DECLARE SUB ExtendFSpec (File$, Ext$, FullFile$, ErrCode%)
+Type: Disk
+Desc: Check a filespec for errors, complete it and format it properly
+
+Name: EXTGET
+Mod : EXTXFER.OBJ
+Decl: DECLARE SUB ExtGet (BYVAL DSeg%, BYVAL DOfs%, Posn&, BYVAL Words%, ErrCode%)
+Type: Memory
+Desc: Get data from extended memory (AT only)
+
+Name: EXTMEM
+Mod : EXTMEM.OBJ
+Decl: DECLARE SUB ExtMem (Kbytes%)
+Type: Equipment Memory
+Desc: See how much extended memory is available (AT only)
+
+Name: EXTPUT
+Mod : EXTXFER.OBJ
+Decl: DECLARE SUB ExtPut (BYVAL DSeg%, BYVAL DOfs%, Posn&, BYVAL Words%, ErrCode%)
+Type: Memory
+Desc: Put data into extended memory (AT only)
+
+Name: EXTRACT
+Mod : EXTRACT.OBJ
+Decl: DECLARE SUB Extract (St$, Delimiter$, Index%, Start%, SLen%)
+Type: String
+Desc: Extract a delimited substring from a string
+
+Name: FADEOUT
+Mod : FADEOUT.OBJ
+Decl: DECLARE SUB FadeOut (BYVAL VAttr%)
+Type: Display
+Desc: Clear the screen with a "fade-out" effect
+
+Name: FARPEEK
+Mod : FARPEEK.OBJ
+Decl: DECLARE FUNCTION FarPeek% (BYVAL DSeg%, BYVAL DOfs%)
+Type: Memory
+Desc: Get a byte from memory (like PEEK, but no need for DEF SEG)
+
+Name: FARPEEKI
+Mod : FARPEEKI.OBJ
+Decl: DECLARE FUNCTION FarPeekI% (BYVAL DSeg%, BYVAL DOfs%)
+Type: Memory
+Desc: Get a word from memory (like two PEEKs with no need for DEF SEG)
+
+Name: FARPEEKL
+Mod : FARPEEKL.OBJ
+Decl: DECLARE FUNCTION FarPeekL& (BYVAL DSeg%, BYVAL DOfs%)
+Type: Memory
+Desc: Get a dword from memory (like four PEEKs with no need for DEF SEG)
+
+Name: FARPOKE
+Mod : FARPOKE.OBJ
+Decl: DECLARE SUB FarPoke (BYVAL DSeg%, BYVAL DOfs%, BYVAL Value%)
+Type: Memory
+Desc: Put a byte into memory (like POKE, but no need for DEF SEG)
+
+Name: FARPOKEI
+Mod : FARPOKEI.OBJ
+Decl: DECLARE SUB FarPokeI (BYVAL DSeg%, BYVAL DOfs%, BYVAL Value%)
+Type: Memory
+Desc: Put a word into memory (like two POKEs with no need for DEF SEG)
+
+Name: FARPOKEL
+Mod : FARPOKEL.OBJ
+Decl: DECLARE SUB FarPokeL (BYVAL DSeg%, BYVAL DOfs%, Value&)
+Type: Memory
+Desc: Put a dword into memory (like four POKEs with no need for DEF SEG)
+
+Name: FCLOSE1
+Mod : FCLOSE1.OBJ
+Decl: DECLARE SUB FClose1 (BYVAL FileHandle%)
+Type: Disk
+Desc: Close a file opened by FOpen1 or FCreate
+
+Name: FCREATE
+Mod : FCREATE.OBJ
+Decl: DECLARE SUB FCreate (FileName$, BYVAL FAttr%, FileHandle%, ErrCode%)
+Type: Disk
+Desc: Create a new file and open it for access
+
+Name: FDESCREAD
+Mod : FDESCREA.OBJ
+Decl: DECLARE FUNCTION FDescRead$ (FileName$)
+Type: Disk
+Desc: Read a 4DOS-style file description
+
+Name: FGETLOC
+Mod : FGETLOC.OBJ
+Decl: DECLARE SUB FGetLoc (BYVAL FileHandle%, Posn&)
+Type: Disk
+Desc: Get the position of a file pointer
+
+Name: FGETLOC2
+Mod : FGETLOC2.OBJ
+Decl: DECLARE FUNCTION FGetLoc2& (BYVAL FileHandle%)
+Type: Disk
+Desc: Get the position of a file pointer
+
+Name: FILECOPY
+Mod : FILECOPY.OBJ
+Decl: DECLARE SUB FileCopy (SourceFile$, DestFile$, FilCount%, ByteCount&, ErrCode%)
+Type: Disk
+Desc: Copy one or more files
+
+Name: FILECOUNT
+Mod : FILCOUNT.OBJ
+Decl: DECLARE SUB FileCount (File$, BYVAL FilAttr%, FilCount%, ErrCode%)
+Type: Disk
+Desc: Count the number of files that match the given search specs
+
+Name: FILECRC
+Mod : FILECRC.OBJ
+Decl: DECLARE SUB FileCRC (FileName$, FileCRC32&, ErrCode%)
+Type: Disk
+Desc: Calculate a 32-bit CRC for a file
+
+Name: FINDFIRSTA
+Mod : ARCHIVES.OBJ
+Decl: DECLARE SUB FindFirstA (Archive$, FileName$, ErrCode%)
+Type: Disk
+Desc: Find the first file in an archive which matches your specs
+
+Name: FINDFIRSTF
+Mod : FINDFILE.OBJ
+Decl: DECLARE SUB FindFirstF (FileName$, BYVAL FAttr%, ErrCode%)
+Type: Disk
+Desc: Find the first file to match your specs (obsolete)
+
+Name: FINDFIRSTFX
+Mod : FINDFILX.OBJ
+Decl: DECLARE SUB FindFirstFx (Buffer$, FileName$, BYVAL FAttr%, ErrCode%)
+Type: Disk
+Desc: Find the first file to match your specs
+
+Name: FINDNEXTA
+Mod : ARCHIVES.OBJ
+Decl: DECLARE SUB FindNextA (ErrCode%)
+Type: Disk
+Desc: Find any other files in an archive which match your specs
+
+Name: FINDNEXTF
+Mod : FINDFILE.OBJ
+Decl: DECLARE SUB FindNextF (ErrCode%)
+Type: Disk
+Desc: Find any other files which match your specs (obsolete)
+
+Name: FINDNEXTFX
+Mod : FINDFILX.OBJ
+Decl: DECLARE SUB FindNextFx (Buffer$, ErrCode%)
+Type: Disk
+Desc: Find any other files which match your specs
+
+Name: FINDPATCH
+Mod : PATCH.OBJ
+Decl: DECLARE SUB FindPatch (FileName$, SearchSt$, ErrCode%)
+Type: Disk
+Desc: Find where to patch an .EXE for self-modifying files
+
+Name: FLOORD
+Mod : FLOORD.OBJ
+Decl: DECLARE FUNCTION FloorD# (Nr#)
+Type: Numeric
+Desc: Return the largest integer less than or equal to a number
+
+Name: FLOORS
+Mod : FLOORS.OBJ
+Decl: DECLARE FUNCTION FloorS! (Nr!)
+Type: Numeric
+Desc: Return the largest integer less than or equal to a number
+
+Name: FLOPPIES
+Mod : FLOPPIES.OBJ
+Decl: DECLARE SUB Floppies (Drives%)
+Type: Disk Equipment
+Desc: See how many floppy drives are available
+
+Name: FLOPPIES2
+Mod : FLOPPIE2.OBJ
+Decl: DECLARE FUNCTION Floppies2% ()
+Type: Disk Equipment
+Desc: See how many floppy drives are available
+
+Name: FLOPPYTYPE
+Mod : FLOPTYPE.OBJ
+Decl: DECLARE SUB FloppyType (Drive1%, Drive2%)
+Type: Disk Equipment
+Desc: See what types of floppy drives are installed
+
+Name: FLUSHTODISK
+Mod : FLUSHDSK.OBJ
+Decl: DECLARE SUB FlushToDisk (BYVAL FileHandle%, ErrCode%)
+Type: Disk
+Desc: Flush a file to disk (force its update)
+
+Name: FOPEN1
+Mod : FOPEN1.OBJ
+Decl: DECLARE SUB FOpen1 (FileName$, BYVAL ReadWrite%, BYVAL Sharing%, FileHandle%, ErrCode%)
+Type: Disk
+Desc: Open an existing file for access
+
+Name: FORCEMATCH
+Mod : FORCEMAT.OBJ
+Decl: DECLARE FUNCTION ForceMatch$ (Pattern$, SourceFile$)
+Type: Disk
+Desc: Force a file to match a specified wildcard pattern
+
+Name: FORMATDATE
+Mod : FORMDATE.OBJ
+Decl: DECLARE SUB FormatDate (DateSt$, FormatSt$, Result$, ErrCode%)
+Type: Time
+Desc: Convert a date to any desired format
+
+Name: FREADLN
+Mod : FREADLN.OBJ
+Decl: DECLARE SUB FReadLn (FileHandle%, St$, SLen%, TooLong%, ErrCode%)
+Type: Disk
+Desc: Read a line of text from a file
+
+Name: FSETEND
+Mod : FSETEND.OBJ
+Decl: DECLARE SUB FSetEnd (BYVAL FileHandle%)
+Type: Disk
+Desc: Move to the end of a file
+
+Name: FSETLOC
+Mod : FSETLOC.OBJ
+Decl: DECLARE SUB FSetLoc (BYVAL FileHandle%, Posn&)
+Type: Disk
+Desc: Move to a specific location in a file
+
+Name: FSETOFS
+Mod : FSETOFS.OBJ
+Decl: DECLARE SUB FSetOfs (BYVAL FileHandle%, Offset&)
+Type: Disk
+Desc: Move backwards or forwards within a file
+
+Name: FSETREC
+Mod : FSETREC.OBJ
+Decl: DECLARE SUB FSetRec (BYVAL FileHandle%, BYVAL RecordSize%, BYVAL RecordNum%)
+Type: Disk
+Desc: Move to a specific record location in a file
+
+Name: FSETSIZE
+Mod : FSETSIZE.OBJ
+Decl: DECLARE SUB FSetSize (BYVAL FileHandle%, Bytes&, ErrCode%)
+Type: Disk
+Desc: Set the size of a file
+
+Name: FSIZE
+Mod : FSIZE.OBJ
+Decl: DECLARE SUB FSize (BYVAL FileHandle%, Bytes&)
+Type: Disk
+Desc: Get the size of a file
+
+Name: FSIZE2
+Mod : FSIZE2.OBJ
+Decl: DECLARE FUNCTION FSize2& (BYVAL FileHandle%)
+Type: Disk
+Desc: Get the size of a file
+
+Name: GET4DOSV
+Mod : GET4DOSV.OBJ
+Decl: DECLARE SUB Get4DOSv (MajorVersion%, MinorVersion%)
+Type: Equipment
+Desc: Get the 4DOS version (zeroes if 4DOS is not installed)
+
+Name: GETATTRF
+Mod : FINDFILE.OBJ
+Decl: DECLARE SUB GetAttrF (FAttr%)
+Type: Disk
+Desc: Get the attribute of a file matched by FindFirstF/FindNextF (obsolete)
+
+Name: GETATTRFX
+Mod : GETATTRX.OBJ
+Decl: DECLARE FUNCTION GetAttrFx% (Buffer$)
+Type: Disk
+Desc: Get the attribute of a file matched by FindFirstFx/FindNextFx
+
+Name: GETCOLOR
+Mod : GETCOLOR.OBJ
+Decl: DECLARE SUB GetColor (Foreground%, Background%)
+Type: Display
+Desc: Get the current colors being used by BASIC
+
+Name: GETCOMMADDR
+Mod : GETCOMMA.OBJ
+Decl: DECLARE SUB GetCommAddr (BYVAL Port%, Address%)
+Type: Serial
+Desc: Get the address of a comm port
+
+Name: GETCRCA
+Mod : ARC00.OBJ
+Decl: DECLARE SUB GetCRCA (CRC16%)
+Type: Disk
+Desc: Get the 16-bit CRC of a file matched by FindFirstA/FindNextA
+
+Name: GETCRCAL
+Mod : ARC00.OBJ
+Decl: DECLARE SUB GetCRCAL (CRC32&)
+Type: Disk
+Desc: Get the 32-bit CRC of a file matched by FindFirstA/FindNextA
+
+Name: GETCRT
+Mod : GETCRT.OBJ
+Decl: DECLARE SUB GetCRT (ColorDisplay%)
+Type: Display Equipment
+Desc: Determine whether the display is color or mono
+
+Name: GETCRT2
+Mod : GETCRT2.OBJ
+Decl: DECLARE FUNCTION GetCRT2% ()
+Type: Display Equipment
+Desc: Determine whether the display is color or mono
+
+Name: GETDATEA
+Mod : ARC00.OBJ
+Decl: DECLARE SUB GetDateA (MonthNr%, DayNr%, YearNr%)
+Type: Disk Time
+Desc: Get the date of a file matched by FindFirstA/FindNextA
+
+Name: GETDATEAT
+Mod : GETTIMAT.OBJ
+Decl: DECLARE SUB GetDateAT (MonthNr%, DayNr%, YearNr%, ErrCode%)
+Type: Time
+Desc: Get the date from the AT hardware clock
+
+Name: GETDATEF
+Mod : FINDFILE.OBJ
+Decl: DECLARE SUB GetDateF (MonthNr%, DayNr%, YearNr%)
+Type: Disk Time
+Desc: Get the date of a file matched by FindFirstF/FindNextF (obsolete)
+
+Name: GETDATEFX
+Mod : GETDATEX.OBJ
+Decl: DECLARE FUNCTION GetDateFx$ (Buffer$)
+Type: Disk Time
+Desc: Get the date of a file matched by FindFirstFx/FindNextFx
+
+Name: GETDOSV
+Mod : GETDOSV.OBJ
+Decl: DECLARE SUB GetDOSv (MajorVersion%, MinorVersion%)
+Type: Equipment
+Desc: Get the DOS version
+
+Name: GETDRIVE
+Mod : GETDRIVE.OBJ
+Decl: DECLARE FUNCTION GetDrive$ ()
+Type: Disk
+Desc: Get the default drive
+
+Name: GETDRV
+Mod : GETDRV.OBJ
+Decl: DECLARE SUB GetDrv (Drive$)
+Type: Disk
+Desc: Get the default drive
+
+Name: GETDVIEW
+Mod : GETDVIEW.OBJ
+Decl: DECLARE SUB GetDView (MajorVersion%, MinorVersion%)
+Type: Miscellaneous
+Desc: See if DESQview is loaded
+
+Name: GETEGA
+Mod : GETEGA.OBJ
+Decl: DECLARE SUB GetEGA (DisplayType%, KBytes%)
+Type: Display Equipment
+Desc: See if an EGA is in use and get info about it
+
+Name: GETEGA2
+Mod : GETEGA2.OBJ
+Decl: DECLARE FUNCTION GetEGA2% ()
+Type: Display Equipment
+Desc: See if an EGA is in use
+
+Name: GETERROR
+Mod : GETERROR.OBJ
+Decl: DECLARE SUB GetError (ErrorLevel%)
+Type: Miscellaneous
+Desc: Retrieve the exit code from a SHELLed-to program
+
+Name: GETERROR2
+Mod : GETERR2.OBJ
+Decl: DECLARE FUNCTION GetError2% ()
+Type: Miscellaneous
+Desc: Retrieve the exit code from a SHELLed-to program
+
+Name: GETEXECPATH
+Mod : GETEXECP.OBJ
+Decl: DECLARE SUB GetExecPath (HomePath$, PathLen%)
+Type: Disk
+Desc: Get the full filespec of the currently-running program
+
+Name: GETEXTM
+Mod : EXTMEM.OBJ
+Decl: DECLARE SUB GetExtM (Kbytes%)
+Type: Equipment Memory
+Desc: See how much extended memory is available (AT only)
+
+Name: GETFATTR
+Mod : GETFATTR.OBJ
+Decl: DECLARE SUB GetFAttr (FileName$, Attribute%)
+Type: Disk
+Desc: Get the attribute of a file
+
+Name: GETFDATE
+Mod : GETFDATE.OBJ
+Decl: DECLARE SUB GetFDate (FileName$, MonthNr%, DayNr%, YearNr%)
+Type: Disk Time
+Desc: Get the date of a file
+
+Name: GETFSIZE
+Mod : GETFSIZE.OBJ
+Decl: DECLARE FUNCTION GetFSize& (FileName$)
+Type: Disk
+Desc: Get the size of a file
+
+Name: GETFTIME
+Mod : GETFTIME.OBJ
+Decl: DECLARE SUB GetFTime (FileName$, HourNr%, MinuteNr%, SecondNr%)
+Type: Disk Time
+Desc: Get the time of a file
+
+Name: GETHGA
+Mod : GETHGA.OBJ
+Decl: DECLARE FUNCTION GetHGA% ()
+Type: Display Equipment
+Desc: See if a Hercules mono adapter is in use
+
+Name: GETKBD
+Mod : GETKBD.OBJ
+Decl: DECLARE SUB GetKbd (Ins%, Caps%, Num%, ScrollLock%)
+Type: Input
+Desc: Get the state of the keyboard toggles
+
+Name: GETKBD1
+Mod : GETKBD1.OBJ
+Decl: DECLARE SUB GetKbd1 (LShift%, RShift%, Control%, Alt%)
+Type: Input
+Desc: Get the state of the shift keys
+
+Name: GETKBD2
+Mod : GETKBD2.OBJ
+Decl: DECLARE SUB GetKbd2 (LShift%, RShift%, LCtrl%, RCtrl%, LAlt%, RAlt%)
+Type: Input
+Desc: Get the state of the shift keys
+
+Name: GETKEY
+Mod : GETKEY.OBJ
+Decl: DECLARE SUB GetKey (Mouse%, ASCIICode%, ScanCode%, LeftButton%, RightButton%)
+Type: Input Mouse
+Desc: Wait for a key or mouse click (2-button mouse)
+
+Name: GETKEY3
+Mod : GETKEY3.OBJ
+Decl: DECLARE SUB GetKey3 (Mouse%, ASCIICode%, ScanCode%, LeftButton%, MiddleButton%, RightButton%)
+Type: Input Mouse
+Desc: Wait for a key or mouse click (3-button mouse)
+
+Name: GETLABEL
+Mod : GETLABEL.OBJ
+Decl: DECLARE SUB GetLabel (Drive$, Label$, LabelLen%, ErrCode%)
+Type: Disk
+Desc: Get a disk volume label
+
+Name: GETLABEL2
+Mod : GETLABL2.OBJ
+Decl: DECLARE FUNCTION GetLabel2$ (Drive$)
+Type: Disk
+Desc: Get a disk volume label
+
+Name: GETLIMHANDLES
+Mod : GETLIMHA.OBJ
+Decl: DECLARE SUB GetLIMHandles (Handles%)
+Type: Memory
+Desc: Get the number of EMS handles in use
+
+Name: GETLIMM
+Mod : GETLIMM.OBJ
+Decl: DECLARE SUB GetLIMm (TotalPages%, FreePages%)
+Type: Equipment Memory
+Desc: See how much expanded memory is available
+
+Name: GETLIMV
+Mod : GETLIMV.OBJ
+Decl: DECLARE SUB GetLIMv (MajorVersionNum%, MinorVersionNum%)
+Type: Equipment Memory
+Desc: Get the EMS (expanded memory) driver version
+
+Name: GETLINE
+Mod : GETLINE.OBJ
+Decl: DECLARE SUB GetLine (BYVAL DSeg%, BYVAL DOfs%, BYVAL Row%, St$, SLen%)
+Type: Display
+Desc: Get a row of text from a virtual screen or saved screen
+
+Name: GETMOUSELOC
+Mod : GETMLOC.OBJ
+Decl: DECLARE SUB GetMouseLoc (Row%, Column%)
+Type: Mouse
+Desc: Get the mouse cursor position (text mode)
+
+Name: GETMOUSEVER
+Mod : GETMVER.OBJ
+Decl: DECLARE SUB GetMouseVer (MajorVer%, MinorVer%, MouseType%, IRQ%)
+Type: Equipment Mouse
+Desc: Get the mouse driver version and hardware info
+
+Name: GETNAMEA
+Mod : ARCHIVES.OBJ
+Decl: DECLARE SUB GetNameA (FileName$, FileNameLen%)
+Type: Disk
+Desc: Get the name of a file matched by FindFirstA/FindNextA
+
+Name: GETNAMEF
+Mod : FINDFILE.OBJ
+Decl: DECLARE SUB GetNameF (FileName$, FileNameLen%)
+Type: Disk
+Desc: Get the name of a file matched by FindFirstF/FindNextF (obsolete)
+
+Name: GETNAMEFX
+Mod : GETNAMEX.OBJ
+Decl: DECLARE FUNCTION GetNameFx$ (Buffer$)
+Type: Disk
+Desc: Get the name of a file matched by FindFirstFx/FindNextFx
+
+Name: GETPRTADDR
+Mod : GETPRTAD.OBJ
+Decl: DECLARE SUB GetPrtAddr (BYVAL Port%, Address%)
+Type: Printer
+Desc: Get the address of a printer port
+
+Name: GETROWS
+Mod : GETROWS.OBJ
+Decl: DECLARE SUB GetRows (DisplayRows%)
+Type: Display
+Desc: Get the number of rows being displayed
+
+Name: GETROWS2
+Mod : GETROWS2.OBJ
+Decl: DECLARE FUNCTION GetRows2% ()
+Type: Display
+Desc: Get the number of rows being displayed
+
+Name: GETSCREEN
+Mod : GETSCRN.OBJ
+Decl: DECLARE SUB GetScreen (Array%(), BYVAL TopRow%, BYVAL LeftCol%, BYVAL BotRow%, BYVAL RtCol%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Get an area of the screen into an array
+
+Name: GETSERIAL
+Mod : GETSER.OBJ
+Decl: DECLARE FUNCTION GetSerial$ (Drive$)
+Type: Disk
+Desc: Get a disk serial number
+
+Name: GETSIZEAL
+Mod : ARCHIVES.OBJ
+Decl: DECLARE SUB GetSizeAL (OriginalSize&, CurrentSize&)
+Type: Disk
+Desc: Get the size of a file matched by FindFirstA/FindNextA
+
+Name: GETSIZEFL
+Mod : FINDFILE.OBJ
+Decl: DECLARE SUB GetSizeFL (FileSize&)
+Type: Disk
+Desc: Get the size of a file matched by FindFirstF/FindNextF (obsolete)
+
+Name: GETSIZEFX
+Mod : GETSIZEX.OBJ
+Decl: DECLARE FUNCTION GetSizeFx& (Buffer$)
+Type: Disk
+Desc: Get the size of a file matched by FindFirstFx/FindNextFx
+
+Name: GETSTOREA
+Mod : ARCHIVES.OBJ
+Decl: DECLARE SUB GetStoreA (Storage$)
+Type: Disk
+Desc: Get the storage type of a file matched by FindFirstA/FindNextA
+
+Name: GETSUB
+Mod : GETSUB.OBJ
+Decl: DECLARE SUB GetSub (SubDir$, SubDirLen%)
+Type: Disk
+Desc: Get the default subdirectory (obsolete)
+
+Name: GETSUB1
+Mod : GETSUB1.OBJ
+Decl: DECLARE SUB GetSub1 (Drive$, SubDir$, SubDirLen%, ErrCode%)
+Type: Disk
+Desc: Get the default subdirectory on a specified drive
+
+Name: GETSUB2
+Mod : GETSUB2.OBJ
+Decl: DECLARE FUNCTION GetSub2$ (Drive$)
+Type: Disk
+Desc: Get the default subdirectory on a specified drive
+
+Name: GETSWITCH
+Mod : GETSWITC.OBJ
+Decl: DECLARE SUB GetSwitch (SwitchChar$)
+Type: Miscellaneous
+Desc: Get the DOS switch character
+
+Name: GETSWITCH2
+Mod : GETSWIT2.OBJ
+Decl: DECLARE FUNCTION GetSwitch2$ ()
+Type: Miscellaneous
+Desc: Get the DOS switch character
+
+Name: GETTICK
+Mod : GETTICK.OBJ
+Decl: DECLARE FUNCTION GetTick& ()
+Type: Time
+Desc: Get the timer tick value (1/18th seconds)
+
+Name: GETTIME
+Mod : GETTIME.OBJ
+Decl: DECLARE SUB GetTime (HourNr%, MinuteNr%, SecondNr%, HundredthSecNr%)
+Type: Time
+Desc: Get the time from DOS (includes 100th seconds)
+
+Name: GETTIMEA
+Mod : ARC00.OBJ
+Decl: DECLARE SUB GetTimeA (HourNr%, MinuteNr%, SecondNr%)
+Type: Disk Time
+Desc: Get the time of a file matched by FindFirstA/FindNextA
+
+Name: GETTIMEAT
+Mod : GETTIMAT.OBJ
+Decl: DECLARE SUB GetTimeAT (HourNr%, MinuteNr%, SecondNr%, ErrCode%)
+Type: Time
+Desc: Get the time from the AT hardware clock
+
+Name: GETTIMEF
+Mod : FINDFILE.OBJ
+Decl: DECLARE SUB GetTimeF (HourNr%, MinuteNr%, SecondNr%)
+Type: Disk Time
+Desc: Get the time of a file matched by FindFirstF/FindNextF (obsolete)
+
+Name: GETTIMEFX
+Mod : GETTIMEX.OBJ
+Decl: DECLARE FUNCTION GetTimeFx$ (Buffer$)
+Type: Disk Time
+Desc: Get the time of a file matched by FindFirstFx/FindNextFx
+
+Name: GETTVIEW
+Mod : GETTVIEW.OBJ
+Decl: DECLARE SUB GetTView (Installed%)
+Type: Miscellaneous
+Desc: See if TopView or a compatible multitasker is loaded
+
+Name: GETTVSCREEN
+Mod : GETTVSCR.OBJ
+Decl: DECLARE SUB GetTVScreen (DSeg%, DOfs%)
+Type: Display
+Desc: Get screen buffer address for TopView and compatible multitaskers
+
+Name: GETVALIDKEY
+Mod : GETVKEY.OBJ
+Decl: DECLARE SUB GetValidKey (GoodKey$, Result$)
+Type: Input
+Desc: Wait for one of a list of valid keys to be pressed
+
+Name: GETVERIFY
+Mod : GETVERIF.OBJ
+Decl: DECLARE SUB GetVerify (VerifyOn%)
+Type: Disk
+Desc: Determine the state of the DOS "verify" setting
+
+Name: GETVGA
+Mod : GETVGA.OBJ
+Decl: DECLARE SUB GetVGA (IsVGA%)
+Type: Display Equipment
+Desc: See if a VGA is in use
+
+Name: GETVGA2
+Mod : GETVGA2.OBJ
+Decl: DECLARE FUNCTION GetVGA2% ()
+Type: Display Equipment
+Desc: See if a VGA is in use
+
+Name: GETVGACOLOR
+Mod : GETVGACO.OBJ
+Decl: DECLARE SUB GetVGAColor (BYVAL ColorNr%, Red%, Green%, Blue%)
+Type: Display
+Desc: Get VGA palette settings (one color)
+
+Name: GETVGAPALETTE
+Mod : GETVGAPA.OBJ
+Decl: DECLARE SUB GetVGAPalette (BYVAL DSeg%, BYVAL DOfs%, BYVAL StartColor%, BYVAL Colors%)
+Type: Display
+Desc: Get the settings of one or more VGA palette registers
+
+Name: GETVIDMODE
+Mod : GETVMODE.OBJ
+Decl: DECLARE SUB GetVidMode (BIOSMode%, ScreenWidth%, ActivePage%)
+Type: Display
+Desc: Return various information about the current display mode
+
+Name: GETXMSM
+Mod : GETXMS.OBJ
+Decl: DECLARE SUB GetXMSm (LargestBlock&, TotalBlocks&)
+Type: Equipment Memory
+Desc: See how much expanded memory is available
+
+Name: GETXMSV
+Mod : GETXMS.OBJ
+Decl: DECLARE SUB GetXMSv (MajorVersionNum%, MinorVersionNum%)
+Type: Equipment Memory
+Desc: Get the EMS (expanded memory) driver version
+
+Name: GLOAD
+Mod : GLOAD.OBJ
+Decl: DECLARE SUB GLoad (Filename$)
+Type: Disk
+Desc: Load a binary image from a file (like BLOAD)
+
+Name: GQPRINT
+Mod : GQPRINT.OBJ
+Decl: DECLARE SUB GQPrint (St$, BYVAL Row%, BYVAL Column%, BYVAL Fast%)
+Type: Display
+Desc: Display text in CGA graphics mode (SCREEN 2)
+
+Name: GRAFPRINT
+Mod : GRAFPRIN.OBJ
+Decl: DECLARE SUB GrafPrint (St$, Col%, Row%, High%, Wide%, Colour%)
+Type: Display
+Desc: Display text at graphics coordinates in a specified size
+
+Name: GRAFREST
+Mod : GRAFREST.OBJ
+Decl: DECLARE SUB GrafRest (BYVAL DSeg%, BYVAL DOfs%)
+Type: Display
+Desc: Restore a saved CGA graphics screen or virtual screen
+
+Name: GRAFSAVE
+Mod : GRAFSAVE.OBJ
+Decl: DECLARE SUB GrafSave (BYVAL DSeg%, BYVAL DOfs%)
+Type: Display
+Desc: Save a CGA graphics screen (SCREEN 1 or SCREEN 2)
+
+Name: GXQPRINT
+Mod : GXQPRINT.OBJ
+Decl: DECLARE SUB GXQPrint (St$, BYVAL Row%, BYVAL Col%, BYVAL Fore%, BYVAL Fast%)
+Type: Display
+Desc: Display text in CGA graphics mode (SCREEN 1)
+
+Name: GXQPRINT1
+Mod : GXQPRIN1.OBJ
+Decl: DECLARE SUB GXQPrint1 (St$, BYVAL Row%, BYVAL Col%, BYVAL Fore%, BYVAL Back%, BYVAL Fast%)
+Type: Display
+Desc: Display text in CGA graphics mode (SCREEN 1)
+
+Name: HANDLEINFO
+Mod : HANDINFO.OBJ
+Decl: DECLARE SUB HandleInfo (BYVAL FileHandle%, Device%, ErrCode%)
+Type: Miscellaneous
+Desc: Determine whether a handle refers to a file or a device
+
+Name: HCLS
+Mod : HERCULES.OBJ
+Decl: DECLARE SUB HCls (BYVAL Colour%)
+Type: Display
+Desc: Clear the screen in Hercules graphics mode
+
+Name: HIBYTE
+Mod : HIBYTE.OBJ
+Decl: DECLARE FUNCTION HiByte% (Nr%)
+Type: Numeric
+Desc: Return the high byte of an integer
+
+Name: HILITE
+Mod : HILITE.OBJ
+Decl: DECLARE SUB HiLite (BYVAL Row%, BYVAL LCol%, BYVAL RCol%, BYVAL VAttr%)
+Type: Display
+Desc: Highlight text on the screen
+
+Name: HIWORD
+Mod : HIWORD.OBJ
+Decl: DECLARE FUNCTION HiWord% (Nr&)
+Type: Numeric
+Desc: Return the high word of a long integer
+
+Name: HLINE
+Mod : HERCULES.OBJ
+Decl: DECLARE SUB HLine (BYVAL X1%, BYVAL Y1%, BYVAL X2%, BYVAL Y2%, BYVAL Colour%)
+Type: Display
+Desc: Draw a line in Hercules graphics mode
+
+Name: HMODE
+Mod : HERCULES.OBJ
+Decl: DECLARE SUB HMode (BYVAL Graphics%)
+Type: Display
+Desc: Switch between Hercules graphics mode and text mode
+
+Name: HPRINT
+Mod : HERCULES.OBJ
+Decl: DECLARE SUB HPrint (St$, BYVAL Row%, BYVAL Column%)
+Type: Display
+Desc: Display text in Hercules graphics mode
+
+Name: HSETPIXEL
+Mod : HERCULES.OBJ
+Decl: DECLARE SUB HSetPixel (BYVAL X%, BYVAL Y%, BYVAL Colour%)
+Type: Display
+Desc: Plot a point in Hercules graphics mode
+
+Name: HTESTPIXEL
+Mod : HERCULES.OBJ
+Decl: DECLARE SUB HTestPixel (BYVAL X%, BYVAL Y%, Colour%)
+Type: Display
+Desc: Get the color of a point in Hercules graphics mode
+
+Name: IDENTIFYFILE
+Mod : IDFILE.OBJ
+Decl: DECLARE SUB IdentifyFile (FileName$, Description$, DescriptionLen%)
+Type: Disk
+Desc: Identify the type of a file
+
+Name: INITPTR
+Mod : INITPTR.OBJ
+Decl: DECLARE SUB InitPtr (Ptr%(), BYVAL Elements%)
+Type: Array_Mgmt
+Desc: Initialize an array of pointers (for use with pointer sorts)
+
+Name: INSCHR
+Mod : CHAR.OBJ
+Decl: DECLARE SUB InsChr (BYVAL Row%, BYVAL Column%)
+Type: Display
+Desc: Insert a space onto the screen
+
+Name: INSLINE
+Mod : LINE.OBJ
+Decl: DECLARE SUB InsLine (BYVAL Row%, BYVAL VAttr%)
+Type: Display
+Desc: Insert a blank row onto the screen
+
+Name: INT2DATE
+Mod : INT2DATE.OBJ
+Decl: DECLARE SUB Int2Date (MonthNr%, DayNr%, YearNr%, BYVAL SqueezedDate%)
+Type: Time
+Desc: Expand a date from an integer into numbers
+
+Name: INT2DATEST
+Mod : INT2DATS.OBJ
+Decl: DECLARE FUNCTION Int2DateSt$ (DateNr%)
+Type: Time
+Desc: Convert a compressed date directly to a string
+
+Name: INT2TIME
+Mod : INT2TIME.OBJ
+Decl: DECLARE SUB Int2Time (HourNr%, MinuteNr%, SecondNr%, BYVAL SqueezedTime%)
+Type: Time
+Desc: Expand a time from an integer into numbers
+
+Name: INT2TIMEST
+Mod : INT2TIMS.OBJ
+Decl: DECLARE FUNCTION Int2TimeSt$ (TimeNr%)
+Type: Time
+Desc: Convert a compressed time directly to a string
+
+Name: INTVECTOR
+Mod : INTVEC.OBJ
+Decl: DECLARE SUB IntVector (DSeg%, DOfs%, BYVAL InterruptNum%)
+Type: Miscellaneous
+Desc: Get the address of an interrupt handler
+
+Name: IREAD
+Mod : IREAD.OBJ
+Decl: DECLARE SUB IRead (BYVAL FileHandle%, Value%, ErrCode%)
+Type: Disk
+Desc: Read an integer from a file
+
+Name: ISALNUM
+Mod : ISALNUM.OBJ
+Decl: DECLARE FUNCTION IsAlNum% (Ch$)
+Type: String
+Desc: See whether a character is alphameric (alphabetic or numeric)
+
+Name: ISALPHA
+Mod : ISALPHA.OBJ
+Decl: DECLARE FUNCTION IsAlpha% (Ch$)
+Type: String
+Desc: See whether a character is alphabetic (a letter)
+
+Name: ISASCII
+Mod : ISASCII.OBJ
+Decl: DECLARE FUNCTION IsASCII% (Ch$)
+Type: String
+Desc: See whether a character is ASCII [below CHR$(128)]
+
+Name: ISCNTRL
+Mod : ISCNTRL.OBJ
+Decl: DECLARE FUNCTION IsCntrl% (Ch$)
+Type: String
+Desc: See whether a character is a control code [CHR$(0)-CHR$(32), CHR$(127)]
+
+Name: ISDIGIT
+Mod : ISDIGIT.OBJ
+Decl: DECLARE FUNCTION IsDigit% (Ch$)
+Type: String
+Desc: See whether a character is a digit
+
+Name: ISLOWER
+Mod : ISLOWER.OBJ
+Decl: DECLARE FUNCTION IsLower% (Ch$)
+Type: String
+Desc: See whether a character is a lowercase letter
+
+Name: ISPRINT
+Mod : ISPRINT.OBJ
+Decl: DECLARE FUNCTION IsPrint% (Ch$)
+Type: String
+Desc: See whether a character is printable [CHR$(32)-CHR$(126)]
+
+Name: ISPUNCT
+Mod : ISPUNCT.OBJ
+Decl: DECLARE FUNCTION IsPunct% (Ch$)
+Type: String
+Desc: See whether a character is punctuation
+
+Name: ISSPACE
+Mod : ISSPACE.OBJ
+Decl: DECLARE FUNCTION IsSpace% (Ch$)
+Type: String
+Desc: See whether a character is white space (space, cr, htab, vtab, lf, ff)
+
+Name: ISTR
+Mod : ISTR.OBJ
+Decl: DECLARE FUNCTION IStr$ (BYVAL Number%)
+Type: String
+Desc: Convert an integer to a string (like STR$)
+
+Name: ISUPPER
+Mod : ISUPPER.OBJ
+Decl: DECLARE FUNCTION IsUpper% (Ch$)
+Type: String
+Desc: See whether a character is an uppercase letter
+
+Name: ISXDIGIT
+Mod : ISXDIGIT.OBJ
+Decl: DECLARE FUNCTION IsXDigit% (Ch$)
+Type: String
+Desc: See whether a character is a hex digit
+
+Name: IVAL
+Mod : IVAL.OBJ
+Decl: DECLARE FUNCTION IVal% (Number$)
+Type: Numeric
+Desc: Convert a string to an integer (like VAL)
+
+Name: KBDTYPE
+Mod : KBDTYPE.OBJ
+Decl: DECLARE SUB KbdType (EnhancedKbd%)
+Type: Equipment Input
+Desc: See if the keyboard is an enhanced model (101-key)
+
+Name: KBDTYPE2
+Mod : KBDTYPE2.OBJ
+Decl: DECLARE FUNCTION KbdType2% ()
+Type: Equipment Input
+Desc: See if the keyboard is an enhanced model (101-key)
+
+Name: KEYPRESS
+Mod : KEYPRESS.OBJ
+Decl: DECLARE SUB KeyPress (KeyHit%)
+Type: Input
+Desc: See if a key is waiting to be retrieved
+
+Name: KVAL
+Mod : KVAL.OBJ
+Decl: DECLARE FUNCTION KVal& (Number$)
+Type: Numeric
+Desc: Convert a string to a long integer, dividing by 1024 along the way
+
+Name: LCLOSE
+Mod : LCLOSE.OBJ
+Decl: DECLARE SUB LClose (BYVAL EMSHandle%)
+Type: Memory
+Desc: Close a block of expanded memory
+
+Name: LGET
+Mod : LGET.OBJ
+Decl: DECLARE SUB LGet (BYVAL EMSHandle%, BYVAL DSeg%, BYVAL DOfs%, BYVAL Words%)
+Type: Memory
+Desc: Get a block of data from expanded memory
+
+Name: LIREAD
+Mod : LIREAD.OBJ
+Decl: DECLARE SUB LIRead (BYVAL FileHandle%, Value&, ErrCode%)
+Type: Disk
+Desc: Read an integer from a file into a long integer
+
+Name: LIWRITE
+Mod : BWRITE.OBJ
+Decl: DECLARE SUB LIWrite (BYVAL FileHandle%, Value&, ErrCode%)
+Type: Disk
+Desc: Write an integer to a file from a long integer
+
+Name: LOADDIR
+Mod : LOADDIR.OBJ
+Decl: DECLARE SUB LoadDir (File$, BYVAL FilAttr%, BYVAL DSeg%, BYVAL DOfs%, ErrCode%)
+Type: Disk
+Desc: Load the names of files that match the given search specs into an array
+
+Name: LOADDIRALL
+Mod : LOADDIRA.OBJ
+Decl: DECLARE SUB LoadDirAll (File$, BYVAL FilAttr%, BYVAL DSeg%, BYVAL DOfs%, ErrCode%)
+Type: Disk
+Desc: Load all info on files that match the given search specs into an array
+
+Name: LOBYTE
+Mod : LOBYTE.OBJ
+Decl: DECLARE FUNCTION LoByte% (Nr%)
+Type: Numeric
+Desc: Return the low byte of an integer
+
+Name: LOCASE
+Mod : LOCASE.OBJ
+Decl: DECLARE SUB Locase (St$)
+Type: String
+Desc: Convert a string to lowercase (U.S. only)
+
+Name: LOCASE1
+Mod : LOCASE1.OBJ
+Decl: DECLARE SUB Locase1 (St$)
+Type: String
+Desc: Convert a string to lowercase (international)
+
+Name: LOGICALDRIVES
+Mod : LOGICAL.OBJ
+Decl: DECLARE FUNCTION LogicalDrives% ()
+Type: Disk Equipment
+Desc: Return the number of logical drives available
+
+Name: LOPEN
+Mod : LOPEN.OBJ
+Decl: DECLARE SUB LOpen (BYVAL Words%, EMSHandle%, ErrCode%)
+Type: Memory
+Desc: Open a block of expanded memory
+
+Name: LOWORD
+Mod : LOWORD.OBJ
+Decl: DECLARE FUNCTION LoWord% (Nr&)
+Type: Numeric
+Desc: Return the low word of a long integer
+
+Name: LPUT
+Mod : LPUT.OBJ
+Decl: DECLARE SUB LPut (BYVAL EMSHandle%, BYVAL DSeg%, BYVAL DOfs%, BYVAL Words%)
+Type: Memory
+Desc: Put a block of data into expanded memory
+
+Name: LREAD
+Mod : IREAD.OBJ
+Decl: DECLARE SUB LRead (BYVAL FileHandle%, Value&, ErrCode%)
+Type: Disk
+Desc: Read a long integer from a file
+
+Name: LROTATE
+Mod : LROTATE.OBJ
+Decl: DECLARE SUB LRotate (St$)
+Type: String
+Desc: Rotate the characters in a string left once
+
+Name: LSCROLL
+Mod : LSCROLL.OBJ
+Decl: DECLARE SUB LScroll (BYVAL TopRow%, BYVAL LeftCol%, BYVAL BottomRow%, BYVAL RightCol%, BYVAL Times%)
+Type: Display
+Desc: Scroll an area of the screen left
+
+Name: LVAL
+Mod : LVAL.OBJ
+Decl: DECLARE FUNCTION LVal& (Number$)
+Type: Numeric
+Desc: Convert a string to a long integer (like VAL)
+
+Name: LWRITE
+Mod : BWRITE.OBJ
+Decl: DECLARE SUB LWrite (BYVAL FileHandle%, Value&, ErrCode%)
+Type: Disk
+Desc: Write a long integer to a file
+
+Name: MAKESUB
+Mod : MAKESUB.OBJ
+Decl: DECLARE SUB MakeSub (Subdir$, ErrCode%)
+Type: Disk
+Desc: Create a subdirectory
+
+Name: MATCHFILE
+Mod : MATCHFIL.OBJ
+Decl: DECLARE SUB MatchFile (PatternName$, FileName$, IsMatch%)
+Type: Disk String
+Desc: See if a filename matches a wildcard filespec
+
+Name: MAX
+Mod : MAX.OBJ
+Decl: DECLARE FUNCTION Max% (BYVAL First%, BYVAL Second%)
+Type: Numeric
+Desc: Return the greater of two integers
+
+Name: MAXD
+Mod : MAXD.OBJ
+Decl: DECLARE FUNCTION MaxD# (First#, Second#)
+Type: Numeric
+Desc: Return the greater of two double-precision numbers
+
+Name: MAXL
+Mod : MAXL.OBJ
+Decl: DECLARE FUNCTION MaxL& (First&, Second&)
+Type: Numeric
+Desc: Return the greater of two long integers
+
+Name: MAXS
+Mod : MAXS.OBJ
+Decl: DECLARE FUNCTION MaxS! (First!, Second!)
+Type: Numeric
+Desc: Return the greater of two single-precision numbers
+
+Name: MEANAVERAGED
+Mod : MAVGD.OBJ
+Decl: DECLARE SUB MeanAverageD (Array#(), First%, Last%, Average#, ErrCode%)
+Type: Numeric
+Desc: Calculate the average (mean) of an array of double-precision numbers
+
+Name: MEANAVERAGEI
+Mod : MAVGI.OBJ
+Decl: DECLARE SUB MeanAverageI (Array%(), First%, Last%, Average%, ErrCode%)
+Type: Numeric
+Desc: Calculate the average (mean) of an array of integers
+
+Name: MEANAVERAGEL
+Mod : MAVGL.OBJ
+Decl: DECLARE SUB MeanAverageL (Array&(), First%, Last%, Average&, ErrCode%)
+Type: Numeric
+Desc: Calculate the average (mean) of an array of long integers
+
+Name: MEANAVERAGES
+Mod : MAVGS.OBJ
+Decl: DECLARE SUB MeanAverageS (Array!(), First%, Last%, Average!, ErrCode%)
+Type: Numeric
+Desc: Calculate the average (mean) of an array of single-precision numbers
+
+Name: MEMSWAP
+Mod : MEMSWAP.OBJ
+Decl: DECLARE SUB MemSwap (BYVAL DSeg1%, BYVAL DOfs1%, BYVAL DSeg2%, BYVAL DOfs2%, BYVAL Bytes%)
+Type: Memory
+Desc: Swap the contents of one area of memory with another
+
+Name: MIN
+Mod : MIN.OBJ
+Decl: DECLARE FUNCTION Min% (BYVAL First%, BYVAL Second%)
+Type: Numeric
+Desc: Return the smaller of two integers
+
+Name: MIND
+Mod : MIND.OBJ
+Decl: DECLARE FUNCTION MinD# (First#, Second#)
+Type: Numeric
+Desc: Return the smaller of two double-precision numbers
+
+Name: MINL
+Mod : MINL.OBJ
+Decl: DECLARE FUNCTION MinL& (First&, Second&)
+Type: Numeric
+Desc: Return the smaller of two long integers
+
+Name: MINS
+Mod : MINS.OBJ
+Decl: DECLARE FUNCTION MinS! (First!, Second!)
+Type: Numeric
+Desc: Return the smaller of two single-precision numbers
+
+Name: MMBUTTON
+Mod : MMBUTTON.OBJ
+Decl: DECLARE SUB MMButton (LeftB%, RightB%)
+Type: Mouse
+Desc: See which mouse buttons are pressed (2-button mouse)
+
+Name: MMBUTTON3
+Mod : MMBUTTO3.OBJ
+Decl: DECLARE SUB MMButton3 (LeftB%, MiddleB%, RightB%)
+Type: Mouse
+Desc: See which mouse buttons are pressed (3-button mouse)
+
+Name: MMCHECK
+Mod : MMCHECK.OBJ
+Decl: DECLARE SUB MMCheck (Buttons%)
+Type: Equipment Mouse
+Desc: See if a mouse is available and, if so, the number of buttons it has
+
+Name: MMCLICK
+Mod : MMCLICK.OBJ
+Decl: DECLARE SUB MMClick (LeftB%, RightB%)
+Type: Mouse
+Desc: See which mouse buttons have been pressed (2-button mouse)
+
+Name: MMCLICK3
+Mod : MMCLICK3.OBJ
+Decl: DECLARE SUB MMClick3 (LeftB%, MiddleB%, RightB%)
+Type: Mouse
+Desc: See which mouse buttons have been pressed (3-button mouse)
+
+Name: MMCURSOROFF
+Mod : MMCURSOR.OBJ
+Decl: DECLARE SUB MMCursorOff ()
+Type: Mouse
+Desc: Make the mouse cursor invisible
+
+Name: MMCURSORON
+Mod : MMCURSOR.OBJ
+Decl: DECLARE SUB MMCursorOn ()
+Type: Mouse
+Desc: Make the mouse visible
+
+Name: MMGETLOC
+Mod : MMGETLOC.OBJ
+Decl: DECLARE SUB MMGetLoc (X%, Y%)
+Type: Mouse
+Desc: Get the mouse cursor position
+
+Name: MMSETLOC
+Mod : MMSETLOC.OBJ
+Decl: DECLARE SUB MMSetLoc (BYVAL X%, BYVAL Y%)
+Type: Mouse
+Desc: Set the mouse cursor position
+
+Name: MMSETRANGE
+Mod : MMSETRAN.OBJ
+Decl: DECLARE SUB MMSetRange (BYVAL X1%, BYVAL Y1%, BYVAL X2%, BYVAL Y2%)
+Type: Mouse
+Desc: Set the allowed range of the mouse cursor
+
+Name: MONTH0
+Mod : MONTH0.OBJ
+Decl: DECLARE SUB Month0 (MonthName$, NameLen%, MonthNr%)
+Type: Time
+Desc: Return the name of a specified month
+
+Name: MOUSEBUFFER
+Mod : MOUSESAV.OBJ
+Decl: DECLARE SUB MouseBuffer (Bytes%)
+Type: Mouse
+Desc: See how many bytes are needed to save the mouse state
+
+Name: MOUSECURSOR
+Mod : MOUSECUR.OBJ
+Decl: DECLARE SUB MouseCursor (CursorNr%)
+Type: Mouse
+Desc: Set the mouse graphics cursor type
+
+Name: MOUSEPEN
+Mod : MOUSEPEN.OBJ
+Decl: DECLARE SUB MousePen (BYVAL EmulatePen%)
+Type: Mouse
+Desc: Tell the mouse driver whether or not to emulate a light pen
+
+Name: MOUSEREST
+Mod : MOUSERES.OBJ
+Decl: DECLARE SUB MouseRest (St$)
+Type: Mouse
+Desc: Restore a saved mouse state
+
+Name: MOUSESAVE
+Mod : MOUSESAV.OBJ
+Decl: DECLARE SUB MouseSave (St$)
+Type: Mouse
+Desc: Save the current state of the mouse
+
+Name: MPRINT
+Mod : MPRINT.OBJ
+Decl: DECLARE SUB MPrint (St$)
+Type: Display
+Desc: Display a string through DOS, within MWindow area
+
+Name: MULMATI
+Mod : MULMATI.OBJ
+Decl: DECLARE SUB MulMatI (BYVAL DSeg%, BYVAL DOfs%, BYVAL Elements%, BYVAL MultBy%, ErrCode%)
+Type: Array_Mgmt
+Desc: Multiply each element of an integer array by a specified value
+
+Name: MULTIAND
+Mod : MULTIAND.OBJ
+Decl: DECLARE SUB MultiAND (St$, BYVAL BitMask%)
+Type: String
+Desc: Perform an AND operation on each character of a string
+
+Name: MULTIOR
+Mod : MULTIOR.OBJ
+Decl: DECLARE SUB MultiOR (St$, BYVAL BitMask%)
+Type: String
+Desc: Perform an OR operation on each character of a string
+
+Name: MULTIXOR
+Mod : MULTIXOR.OBJ
+Decl: DECLARE SUB MultiXOR (St$, BYVAL BitMask%)
+Type: String
+Desc: Perform an XOR operation on each character of a string
+
+Name: MWINDOW
+Mod : MPRINT.OBJ
+Decl: DECLARE SUB MWindow (BYVAL TopRow%, BYVAL Lfol%, BYVAL BotRow%, BYVAL RtCol%)
+Type: Display
+Desc: Set the display area to be used by MPrint
+
+Name: NAMECASE
+Mod : NAMECAS2.OBJ
+Decl: DECLARE SUB NameCase (St$)
+Type: String
+Desc: Convert a string to the proper uppercase/lowercase format for a name
+
+Name: NAMECASE2
+Mod : NAMECAS2.OBJ
+Decl: DECLARE FUNCTION NameCase2$ (St$)
+Type: String
+Desc: Convert a string to the proper uppercase/lowercase format for a name
+
+Name: NUM2PHONE
+Mod : PHONE.OBJ
+Decl: DECLARE FUNCTION Num2Phone$ (Phone&)
+Type: Numeric String
+Desc: Convert a compressed phone number to a string
+
+Name: NUMFORMAT
+Mod : NUMFORM.OBJ
+Decl: DECLARE SUB NumFormat (Format$, Number#, Result$)
+Type: Numeric
+Desc: Format a number in a string (like PRINT USING)
+
+Name: NUMPROC
+Mod : NUMPROC.OBJ
+Decl: DECLARE SUB NumProc (ProcType%)
+Type: Equipment
+Desc: See what kind of numeric coprocessor is available
+
+Name: NUMPROC2
+Mod : NUMPROC2.OBJ
+Decl: DECLARE FUNCTION NumProc2% ()
+Type: Equipment
+Desc: See what kind of numeric coprocessor is available
+
+Name: OBJSCAN
+Mod : OBJSCAN.OBJ
+Decl: DECLARE SUB ObjScan (ObjFile$, ModName$, Routine$(), External$(), ErrCode%)
+Type: Disk
+Desc: Scan an .OBJ file for external and public names
+
+Name: ODD
+Mod : ODD.OBJ
+Decl: DECLARE FUNCTION Odd% (BYVAL Number%)
+Type: Numeric
+Desc: Return whether an integer is odd
+
+Name: ODDL
+Mod : ODDL.OBJ
+Decl: DECLARE FUNCTION OddL% (Number&)
+Type: Numeric
+Desc: Return whether a long integer is odd
+
+Name: ORST
+Mod : ORST.OBJ
+Decl: DECLARE SUB OrSt (St1$, St2$)
+Type: String
+Desc: OR the bytes in one string with those in another
+
+Name: PARSEFSPEC
+Mod : PARSEFSP.OBJ
+Decl: DECLARE SUB ParseFSpec (FileSpec$, Drive$, DLen%, Subdir$, SLen%, File$, FLen%)
+Type: Disk
+Desc: Split a filespec into drive, subdirectory, and file name
+
+Name: PATCHDONE
+Mod : PATCH.OBJ
+Decl: DECLARE SUB PatchDone ()
+Type: Disk
+Desc: Terminate the patching of an .EXE file
+
+Name: PCDAT
+Mod : PCDAT.OBJ
+Decl: DECLARE FUNCTION PCDat$ ()
+Type: Equipment
+Desc: Get the date of the ROM BIOS
+
+Name: PCDATE
+Mod : PCDATE.OBJ
+Decl: DECLARE SUB PCDate (ROMDate$)
+Type: Equipment
+Desc: Get the date of the ROM BIOS
+
+Name: PCTYPE
+Mod : PCTYPE.OBJ
+Decl: DECLARE SUB PCType (MachineID%)
+Type: Equipment
+Desc: Get the machine I.D. from the ROM BIOS
+
+Name: PCTYPE2
+Mod : PCTYPE2.OBJ
+Decl: DECLARE FUNCTION PCType2% ()
+Type: Equipment
+Desc: Get the machine I.D. from the ROM BIOS
+
+Name: PHONE2NUM
+Mod : PHONE.OBJ
+Decl: DECLARE FUNCTION Phone2Num& (Phone$)
+Type: Numeric String
+Desc: Validate a phone # and compress it to a long integer
+
+Name: PRINTERINIT
+Mod : PRTINIT.OBJ
+Decl: DECLARE SUB PrinterInit (BYVAL PrtPort%)
+Type: Printer
+Desc: Initialize a printer
+
+Name: PRINTERREADY
+Mod : PRTREADY.OBJ
+Decl: DECLARE FUNCTION PrinterReady% (BYVAL Port%)
+Type: Equipment Printer
+Desc: See whether a printer is ready
+
+Name: PRINTFILE
+Mod : PRINTFIL.OBJ
+Decl: DECLARE SUB PrintFile (FileName$, ErrCode%)
+Type: Printer
+Desc: Send a file to a printer
+
+Name: PRINTSCREEN
+Mod : PRINTSCR.OBJ
+Decl: DECLARE SUB PrintScreen ()
+Type: Display Printer
+Desc: Print the screen on a printer
+
+Name: PROCESSOR
+Mod : PROCESSR.OBJ
+Decl: DECLARE SUB Processor (CPU%)
+Type: Equipment
+Desc: See what kind of CPU is in use
+
+Name: PROCESSOR2
+Mod : PROCESS2.OBJ
+Decl: DECLARE FUNCTION Processor2% ()
+Type: Equipment
+Desc: See what kind of CPU is in use
+
+Name: PRTSC
+Mod : PRINTSCR.OBJ
+Decl: DECLARE SUB PrtSc (BYVAL Enable%)
+Type: Input Printer
+Desc: Enable or disable the PrtSc (PrintScreen) key
+
+Name: PRTSWAP
+Mod : PRTSWAP.OBJ
+Decl: DECLARE SUB PrtSwap (BYVAL Port1%, BYVAL Port2%)
+Type: Printer
+Desc: Swap any two (parallel) printer ports
+
+Name: PSORTD
+Mod : PSORTD.OBJ
+Decl: DECLARE SUB PSortD (Ptr%(), Array#(), Elements%)
+Type: Array_Mgmt
+Desc: Pointer sort an array of double-precision numbers
+
+Name: PSORTI
+Mod : PSORTI.OBJ
+Decl: DECLARE SUB PSortI (Ptr%(), Array%(), Elements%)
+Type: Array_Mgmt
+Desc: Pointer sort an array of integers
+
+Name: PSORTL
+Mod : PSORTL.OBJ
+Decl: DECLARE SUB PSortL (Ptr%(), Array&(), Elements%)
+Type: Array_Mgmt
+Desc: Pointer sort an array of long integers
+
+Name: PSORTS
+Mod : PSORTS.OBJ
+Decl: DECLARE SUB PSortS (Ptr%(), Array!(), Elements%)
+Type: Array_Mgmt
+Desc: Pointer sort an array of single-precision numbers
+
+Name: PSORTST
+Mod : PSORTST.OBJ
+Decl: DECLARE SUB PSortSt (Ptr%(), Array$(), Elements%, CapsCount%)
+Type: Array_Mgmt
+Desc: Pointer sort an array of strings
+
+Name: PUTSCREEN
+Mod : PUTSCRN.OBJ
+Decl: DECLARE SUB PutScreen (Array%(), BYVAL TopRow%, BYVAL LeftCol%, BYVAL BotRow%, BYVAL RCol%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Put text from an array onto an area of the screen
+
+Name: QPRINT
+Mod : QPRINT.OBJ
+Decl: DECLARE SUB QPrint (St$, BYVAL Row%, BYVAL Column%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Display text on the screen
+
+Name: RAND
+Mod : RAND.OBJ
+Decl: DECLARE FUNCTION Rand% (BYVAL Range%)
+Type: Numeric
+Desc: Return a pseudo-random number in a specified range
+
+Name: READBITF
+Mod : READBITF.OBJ
+Decl: DECLARE SUB ReadBitF (BYVAL DSeg%, BYVAL DOfs%, ElementNr&, BYVAL BitLen%, Value%)
+Type: Numeric
+Desc: Read a value of a specified bit length from an array
+
+Name: REBOOT
+Mod : REBOOT.OBJ
+Decl: DECLARE SUB Reboot ()
+Type: Miscellaneous
+Desc: Boot the computer (like Ctrl-Alt-Del)
+
+Name: RECOLOR
+Mod : RECOLOR.OBJ
+Decl: DECLARE SUB ReColor (BYVAL OldAttr%, BYVAL NewAttr%)
+Type: Display
+Desc: Change text from one color to a new color
+
+Name: RECOLORAREA
+Mod : RECOLORA.OBJ
+Decl: DECLARE SUB ReColorArea (BYVAL TopRow%, BYVAL LeftCol%, BYVAL BottomRow%, BYVAL RightCol%, BYVAL VAttr%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Change text in a selected area to a new color
+
+Name: REDIRECTIN
+Mod : REDIRIN.OBJ
+Decl: DECLARE FUNCTION RedirectIn% ()
+Type: Miscellaneous
+Desc: See whether input has been redirected
+
+Name: REDIRECTOUT
+Mod : REDIROUT.OBJ
+Decl: DECLARE FUNCTION RedirectOut% ()
+Type: Miscellaneous
+Desc: See whether output has been redirected
+
+Name: RENAME
+Mod : RENAME.OBJ
+Decl: DECLARE SUB Rename (CurrentName$, NewName$, ErrCode%)
+Type: Disk
+Desc: Rename a file
+
+Name: RENSUB
+Mod : RENSUB.OBJ
+Decl: DECLARE SUB RenSub (CurrentName$, NewName$, ErrCode%)
+Type: Disk
+Desc: Rename a subdirectory
+
+Name: REPLACE
+Mod : REPLACE.OBJ
+Decl: DECLARE SUB Replace (St$, CurrentChar$, NewChar$)
+Type: String
+Desc: Replace one character in a string with another character
+
+Name: REPLACESTRING
+Mod : REPLACST.OBJ
+Decl: DECLARE SUB ReplaceString (St$, Old$, New$, Found%, ErrCode%)
+Type: String
+Desc: Replace one substring in a string with another substring
+
+Name: RETRIES
+Mod : RETRIES.OBJ
+Decl: DECLARE SUB Retries (BYVAL Tries%, BYVAL RetryPauseLen%)
+Type: Disk
+Desc: Set the number of retries (and delays) used in file networking
+
+Name: REVERSE
+Mod : REVERSE.OBJ
+Decl: DECLARE SUB Reverse (St$)
+Type: String
+Desc: Reverse a string
+
+Name: REVERSED
+Mod : REVD.OBJ
+Decl: DECLARE SUB ReverseD (Array#(), Elements%)
+Type: Array_Mgmt
+Desc: Reverse an array of double-precision numbers
+
+Name: REVERSEI
+Mod : REVI.OBJ
+Decl: DECLARE SUB ReverseI (Array%(), Elements%)
+Type: Array_Mgmt
+Desc: Reverse an array of integers
+
+Name: REVERSEL
+Mod : REVL.OBJ
+Decl: DECLARE SUB ReverseL (Array&(), Elements%)
+Type: Array_Mgmt
+Desc: Reverse an array of long integers
+
+Name: REVERSES
+Mod : REVS.OBJ
+Decl: DECLARE SUB ReverseS (Array!(), Elements%)
+Type: Array_Mgmt
+Desc: Reverse an array of single-precision numbers
+
+Name: REVERSEST
+Mod : REVST.OBJ
+Decl: DECLARE SUB ReverseSt (Array$(), Elements%)
+Type: Array_Mgmt
+Desc: Reverse an array of strings
+
+Name: RINSTR
+Mod : RINSTR.OBJ
+Decl: DECLARE SUB RInstr (MainSt$, SubSt$, Posn%)
+Type: String
+Desc: Find the last occurrence of a substring within a string
+
+Name: ROLST
+Mod : ROLST.OBJ
+Decl: DECLARE SUB RolSt (St$, BYVAL ShiftCount%)
+Type: String
+Desc: Rotate the bits in a string left
+
+Name: RORST
+Mod : RORST.OBJ
+Decl: DECLARE SUB RorSt (St$, BYVAL ShiftCount%)
+Type: String
+Desc: Rotate the bits in a string right
+
+Name: RROTATE
+Mod : RROTATE.OBJ
+Decl: DECLARE SUB RRotate (St$)
+Type: String
+Desc: Rotate the characters in a string right once
+
+Name: RSCROLL
+Mod : RSCROLL.OBJ
+Decl: DECLARE SUB RScroll (BYVAL TopRow%, BYVAL LeftCol%, BYVAL BottomRow%, BYVAL RightCol%, BYVAL Times%)
+Type: Display
+Desc: Scroll an area of the screen right
+
+Name: SCANKEY
+Mod : SCANKEY.OBJ
+Decl: DECLARE SUB ScanKey (CharCode%, CharType%)
+Type: Input
+Desc: Examine a key without removing it from the keyboard buffer
+
+Name: SCROLL
+Mod : SCROLL.OBJ
+Decl: DECLARE SUB Scroll (BYVAL TopRow%, BYVAL LeftCol%, BYVAL BottomRow%, BYVAL RightCol%, BYVAL Times%)
+Type: Display
+Desc: Scroll an area of the screen up
+
+Name: SCRREST
+Mod : SCRREST.OBJ
+Decl: DECLARE SUB ScrRest (Array%(), Page%, Fast%)
+Type: Display
+Desc: Restore a saved screen
+
+Name: SCRSAVE
+Mod : SCRSAVE.OBJ
+Decl: DECLARE SUB ScrSave (Array%(), Page%, Fast%)
+Type: Display
+Desc: Save a screen to an array
+
+Name: SCRUNCH
+Mod : SCRUNCH.OBJ
+Decl: DECLARE SUB Scrunch (BYVAL DSeg%, BYVAL DOfs%, BYVAL CSeg%, BYVAL COfs%, Bytes%)
+Type: Display
+Desc: Compress a saved screen
+
+Name: SEC2TIME
+Mod : SEC2TIME.OBJ
+Decl: DECLARE FUNCTION Sec2Time$ (Seconds&)
+Type: Time
+Desc: Convert from "seconds past midnight" to a time string
+
+Name: SETBIT
+Mod : SETBIT.OBJ
+Decl: DECLARE SUB SetBit (Number%, BYVAL BitNr%)
+Type: Numeric
+Desc: Set a bit in an integer
+
+Name: SETCGACOLOR
+Mod : SETCGACO.OBJ
+Decl: DECLARE SUB SetCGAColor (BYVAL Colour%)
+Type: Display
+Desc: Set various aspects of CGA colors
+
+Name: SETCOMM
+Mod : SETCOMM.OBJ
+Decl: DECLARE SUB SetComm (BYVAL CommPort%, BYVAL Bps%, BYVAL Parity%, BYVAL WordLen%, BYVAL StopBits%)
+Type: Serial
+Desc: Set comm parameters
+
+Name: SETCOMMADDR
+Mod : SETCOMMA.OBJ
+Decl: DECLARE SUB SetCommAddr (BYVAL Port%, BYVAL Address%)
+Type: Serial
+Desc: Set the address of a comm port
+
+Name: SETDATEAT
+Mod : SETTIMAT.OBJ
+Decl: DECLARE SUB SetDateAT (MonthNr%, DayNr%, YearNr%)
+Type: Time
+Desc: Set the date of the AT hardware clock
+
+Name: SETDRV
+Mod : SETDRV.OBJ
+Decl: DECLARE SUB SetDrv (Drive$)
+Type: Disk
+Desc: Set the default drive
+
+Name: SETERROR
+Mod : SETERROR.OBJ
+Decl: DECLARE SUB SetError (BYVAL ErrorLevel%)
+Type: Miscellaneous
+Desc: Set the exit code to return when your program terminates
+
+Name: SETFATTR
+Mod : SETFATTR.OBJ
+Decl: DECLARE SUB SetFAttr (FileName$, BYVAL Attribute%)
+Type: Disk
+Desc: Set the attribute of a file
+
+Name: SETFTD
+Mod : SETFTD.OBJ
+Decl: DECLARE SUB SetFTD (FileName$, BYVAL MonthNr%, BYVAL DayNr%, BYVAL YearNr%, BYVAL HourNr%, BYVAL MinuteNr%, BYVAL SecondNr%)
+Type: Disk
+Desc: Set the time and date of a file
+
+Name: SETKBD
+Mod : SETKBD.OBJ
+Decl: DECLARE SUB SetKbd (BYVAL Ins%, BYVAL Caps%, BYVAL Num%, BYVAL ScrollLock%)
+Type: Input
+Desc: Set the state of the keyboard toggles
+
+Name: SETLABEL
+Mod : SETLABEL.OBJ
+Decl: DECLARE SUB SetLabel (Drive$, Label$, ErrCode%)
+Type: Disk
+Desc: Set a disk volume label
+
+Name: SETMATI
+Mod : SETMATI.OBJ
+Decl: DECLARE SUB SetMatI (BYVAL DSeg%, BYVAL DOfs%, BYVAL Elements%, BYVAL InitVal%)
+Type: Array_Mgmt
+Desc: Initialize an integer array to a given value
+
+Name: SETMATL
+Mod : SETMATL.OBJ
+Decl: DECLARE SUB SetMatL (BYVAL DSeg%, BYVAL DOfs%, BYVAL Elements%, InitVal&)
+Type: Array_Mgmt
+Desc: Initialize a long integer array to a given value
+
+Name: SETMOUSELOC
+Mod : SETMLOC.OBJ
+Decl: DECLARE SUB SetMouseLoc (BYVAL Row%, BYVAL Column%)
+Type: Mouse
+Desc: Set the mouse cursor position (text mode)
+
+Name: SETPATCH
+Mod : PATCH.OBJ
+Decl: DECLARE SUB SetPatch (St$)
+Type: Disk
+Desc: Install a patch into an .EXE file
+
+Name: SETPRTADDR
+Mod : SETPRTAD.OBJ
+Decl: DECLARE SUB SetPrtAddr (BYVAL Port%, BYVAL Address%)
+Type: Printer
+Desc: Set the address of a printer port
+
+Name: SETSUB
+Mod : SETSUB.OBJ
+Decl: DECLARE SUB SetSub (Subdir$, ErrCode%)
+Type: Disk
+Desc: Set the default subdirectory
+
+Name: SETTIMEAT
+Mod : SETTIMAT.OBJ
+Decl: DECLARE SUB SetTimeAT (HourNr%, MinuteNr%, SecondNr%)
+Type: Time
+Desc: Set the time of the AT hardware clock
+
+Name: SETVERIFY
+Mod : SETVERIF.OBJ
+Decl: DECLARE SUB SetVerify (BYVAL VerifyOn%)
+Type: Disk
+Desc: Set the state of the DOS "verify" switch
+
+Name: SETVGACOLOR
+Mod : SETVGACO.OBJ
+Decl: DECLARE SUB SetVGAColor (BYVAL ColorNr%, BYVAL Red%, BYVAL Green%, BYVAL Blue%)
+Type: Display
+Desc: Set VGA palette information (one color)
+
+Name: SETVGAPALETTE
+Mod : SETVGAPA.OBJ
+Decl: DECLARE SUB SetVGAPalette (BYVAL DSeg%, BYVAL DOfs%, BYVAL StartColor%, BYVAL Colors%)
+Type: Display
+Desc: Set VGA palette information (one or more colors)
+
+Name: SFREAD
+Mod : SFREAD.OBJ
+Decl: DECLARE SUB SFRead (BYVAL FileHandle%, St$, BytesRead%, ErrCode%)
+Type: Disk String
+Desc: Read from a file into a string
+
+Name: SFWRITE
+Mod : SFWRITE.OBJ
+Decl: DECLARE SUB SFWrite (BYVAL FileHandle%, St$, BytesWritten%, ErrCode%)
+Type: Disk String
+Desc: Write a string to a file
+
+Name: SHIFTL
+Mod : SHIFTL.OBJ
+Decl: DECLARE SUB ShiftL (Value%, BYVAL ShiftCount%)
+Type: Numeric
+Desc: Shift the bits in an integer left
+
+Name: SHIFTLL
+Mod : SHIFTLL.OBJ
+Decl: DECLARE SUB ShiftLL (Value&, BYVAL ShiftCount%)
+Type: Numeric
+Desc: Shift the bits in a long integer left
+
+Name: SHIFTR
+Mod : SHIFTR.OBJ
+Decl: DECLARE SUB ShiftR (Value%, BYVAL ShiftCount%)
+Type: Numeric
+Desc: Shift the bits in an integer right
+
+Name: SHIFTRL
+Mod : SHIFTRL.OBJ
+Decl: DECLARE SUB ShiftRL (Value&, BYVAL ShiftCount%)
+Type: Numeric
+Desc: Shift the bits in a long integer right
+
+Name: SHLST
+Mod : SHLST.OBJ
+Decl: DECLARE SUB ShlSt (St$, BYVAL ShiftCount%)
+Type: String
+Desc: Shift the bits in a string left
+
+Name: SHRST
+Mod : SHRST.OBJ
+Decl: DECLARE SUB ShrSt (St$, BYVAL ShiftCount%)
+Type: String
+Desc: Shift the bits in a string right
+
+Name: SINPUT
+Mod : SINPUT.OBJ
+Decl: DECLARE SUB SInput (St$, SLen%, ValidTypes%, MustFill%, VAttr%, ExitCode%)
+Type: Input
+Desc: Flexible replacement for LINE INPUT
+
+Name: SINPUTSET
+Mod : SINPUTSE.OBJ
+Decl: DECLARE SUB SInputSet (FillCh$, BYVAL ExitMode%, BYVAL BadBeep%, BYVAL FullBeep%, BYVAL Fast%)
+Type: Input
+Desc: Set various parameters for the SInput routine
+
+Name: SINPUTSET1
+Mod : SINPUTSE.OBJ
+Decl: DECLARE SUB SInputSet1 (BYVAL CurPosn%, BYVAL FullExit%)
+Type: Input
+Desc: Set various parameters for the SInput routine
+
+Name: SINPUTSET2
+Mod : SINPUTSE.OBJ
+Decl: DECLARE SUB SInputSet2 (BYVAL Capitalize%, BYVAL TabExit%)
+Type: Input
+Desc: Set various parameters for the SInput routine
+
+Name: SORTD
+Mod : SORTD.OBJ
+Decl: DECLARE SUB SortD (Array#(), Elements%)
+Type: Array_Mgmt
+Desc: Sort an array of double-precision numbers
+
+Name: SORTI
+Mod : SORTI.OBJ
+Decl: DECLARE SUB SortI (Array%(), Elements%)
+Type: Array_Mgmt
+Desc: Sort an array of integers
+
+Name: SORTL
+Mod : SORTL.OBJ
+Decl: DECLARE SUB SortL (Array&(), Elements%)
+Type: Array_Mgmt
+Desc: Sort an array of long integers
+
+Name: SORTS
+Mod : SORTS.OBJ
+Decl: DECLARE SUB SortS (Array!(), Elements%)
+Type: Array_Mgmt
+Desc: Sort an array of single-precision numbers
+
+Name: SORTST
+Mod : SORTST.OBJ
+Decl: DECLARE SUB SortSt (Array$(), Elements%, CapsCount%)
+Type: Array_Mgmt
+Desc: Sort an array of strings
+
+Name: SOUNDEX
+Mod : SOUNDEX.OBJ
+Decl: DECLARE SUB Soundex (St$, Result$, CodeLen%)
+Type: String
+Desc: Determine what a string "sounds" like
+
+Name: SPEEDKEY
+Mod : SPEEDKEY.OBJ
+Decl: DECLARE SUB SpeedKey (BYVAL RepeatDelay%, BYVAL RepeatRate%)
+Type: Input
+Desc: Change the keyboard repeat rate
+
+Name: SPLIT
+Mod : SPLIT.OBJ
+Decl: DECLARE SUB Split ()
+Type: Display
+Desc: Clear the screen by scrolling it in different directions
+
+Name: SPOOLER
+Mod : SPOOLER.OBJ
+Decl: DECLARE SUB Spooler (PrintSpooler%)
+Type: Printer
+Desc: See if the DOS print spooler (PRINT.COM) is loaded
+
+Name: SSRCH
+Mod : SSRCH.OBJ
+Decl: DECLARE SUB SSrch (SubSt$, MainSt$, FoundMatch%)
+Type: String
+Desc: See if one string is a substring of another string
+
+Name: STRDEL
+Mod : STRDEL.OBJ
+Decl: DECLARE SUB StrDel (St$, BYVAL Posn%)
+Type: String
+Desc: Delete a character from a string
+
+Name: STRINS
+Mod : STRINS.OBJ
+Decl: DECLARE SUB StrIns (St$, BYVAL Posn%)
+Type: String
+Desc: Insert a space into a string
+
+Name: STRIP
+Mod : STRIP.OBJ
+Decl: DECLARE SUB Strip (St$)
+Type: String
+Desc: Strip the blanks from both sides of a string
+
+Name: STRIP2
+Mod : STRIP2.OBJ
+Decl: DECLARE FUNCTION Strip2$ (St$)
+Type: String
+Desc: Strip the blanks from both sides of a string
+
+Name: STRIPBLANKS
+Mod : STRIPBLN.OBJ
+Decl: DECLARE SUB StripBlanks (St$, BYVAL WhichSide%, StLen%)
+Type: String
+Desc: Strip the blanks from either or both sides of a string
+
+Name: STRIPCHAR
+Mod : STRIPCHR.OBJ
+Decl: DECLARE SUB StripChar (St$, Ch$, StLen%)
+Type: String
+Desc: Strip a specified list of characters from a string
+
+Name: STRIPRANGE
+Mod : STRIPRAN.OBJ
+Decl: DECLARE SUB StripRange (St$, BYVAL LoChar%, BYVAL HiChar%, StLen%)
+Type: String
+Desc: Strip a specified range of characters from a string
+
+Name: STRIPSPACES
+Mod : STRIPSPC.OBJ
+Decl: DECLARE SUB StripSpaces (St$, BYVAL WhichSide%, StLen%)
+Type: String
+Desc: Strip the spaces from either or both sides of a string
+
+Name: STRSQU
+Mod : STRSQU.OBJ
+Decl: DECLARE FUNCTION StrSqu$ (St$)
+Type: String
+Desc: Compress a text string using 2 & 3-gram compression
+
+Name: STRSQU2
+Mod : STRSQU2.OBJ
+Decl: DECLARE SUB StrSqu2 (St$, Result$)
+Type: String
+Desc: Compress a text string using 2-gram compression
+
+Name: STRSQU3
+Mod : STRSQU3.OBJ
+Decl: DECLARE SUB StrSqu3 (St$, Result$)
+Type: String
+Desc: Compress a text string using 3-gram compression
+
+Name: STRSQULEN2
+Mod : STRSQU2.OBJ
+Decl: DECLARE SUB StrSquLen2 (St$, ResultLen%)
+Type: String
+Desc: Determine the compressed length of a string compressed by StrSqu2
+
+Name: STRSQULEN3
+Mod : STRSQU3.OBJ
+Decl: DECLARE SUB StrSquLen3 (St$, ResultLen%)
+Type: String
+Desc: Determine the compressed length of a string compressed by StrSqu3
+
+Name: STRUNSQ
+Mod : STRUNSQ.OBJ
+Decl: DECLARE FUNCTION StrUnsq$ (St$)
+Type: String
+Desc: Uncrunch a string compressed by StrSqu$
+
+Name: STRUNSQU2
+Mod : STRUSQU2.OBJ
+Decl: DECLARE SUB StrUnsqu2 (St$, Result$)
+Type: String
+Desc: Expand a string compressed by StrSqu2
+
+Name: STRUNSQU3
+Mod : STRUSQU3.OBJ
+Decl: DECLARE SUB StrUnsqu3 (St$, Result$)
+Type: String
+Desc: Expand a string compressed by StrSqu3
+
+Name: STRUNSQULEN2
+Mod : STRUSQU2.OBJ
+Decl: DECLARE SUB StrUnsquLen2 (St$, ResultLen%)
+Type: String
+Desc: Determine the expanded length of a string compressed by StrSqu2
+
+Name: STRUNSQULEN3
+Mod : STRUSQU3.OBJ
+Decl: DECLARE SUB StrUnsquLen3 (St$, ResultLen%)
+Type: String
+Desc: Determine the expanded length of a string compressed by StrSqu3
+
+Name: SUBEXIST
+Mod : SUBEXIST.OBJ
+Decl: DECLARE SUB SubExist (SubDir$, IsThere%)
+Type: Disk
+Desc: See whether a subdirectory exists
+
+Name: SUBEXIST2
+Mod : SUBEXIS2.OBJ
+Decl: DECLARE FUNCTION SubExist2% (SubDir$)
+Type: Disk
+Desc: See whether a subdirectory exists
+
+Name: TIME2INT
+Mod : TIME2INT.OBJ
+Decl: DECLARE SUB Time2Int (BYVAL HourNr%, BYVAL MinuteNr%, BYVAL SecondNr%, SqueezedTime%)
+Type: Time
+Desc: Compress a time into an integer
+
+Name: TIME2SEC
+Mod : TIME2SEC.OBJ
+Decl: DECLARE FUNCTION Time2Sec& (TimeSt$)
+Type: Time
+Desc: Convert a time string into a "seconds past midnight" value
+
+Name: TIMEN2S
+Mod : TIMEN2S.OBJ
+Decl: DECLARE SUB TimeN2S (HourNr%, MinuteNr%, SecondNr%, TimeSt$)
+Type: Time
+Desc: Convert a time from numbers to a string
+
+Name: TIMES2N
+Mod : TIMES2N.OBJ
+Decl: DECLARE SUB TimeS2N (HourNr%, MinuteNr%, SecondNr%, TimeSt$)
+Type: Time
+Desc: Convert a time from a string to numbers
+
+Name: TINSTR
+Mod : TINSTR.OBJ
+Decl: DECLARE SUB TInstr (St$, BYVAL ChrType%, Place%)
+Type: String
+Desc: Search for a specific kind of character in a string
+
+Name: TYPEIN
+Mod : TYPEIN.OBJ
+Decl: DECLARE SUB TypeIn (St$)
+Type: Input
+Desc: Put keys into the keyboard buffer as if they had been typed
+
+Name: TYPEPRINT
+Mod : TYPEPRIN.OBJ
+Decl: DECLARE SUB TypePrint (St$, Row%, Column%, WaitTime%, TmpAttr%, VAttr%, Fast%)
+Type: Display
+Desc: Display text as if it is being typed
+
+Name: UNCALCATTR
+Mod : UNCALCAT.OBJ
+Decl: DECLARE SUB UnCalcAttr (Foreground%, Background%, BYVAL VAttr%)
+Type: Display
+Desc: Split a color/attribute into foreground and background colors
+
+Name: UNSCRUNCH
+Mod : UNSCRUNC.OBJ
+Decl: DECLARE SUB UnScrunch (BYVAL DSeg%, BYVAL DOfs%, BYVAL CSeg%, BYVAL COfs%)
+Type: Display
+Desc: Uncompress screen info processed by Scrunch
+
+Name: UNSPLIT
+Mod : UNSPLIT.OBJ
+Decl: DECLARE SUB UnSplit (Scrn%(), Fast%)
+Type: Display
+Desc: Restore a saved screen by scrolling it on from different directions
+
+Name: UPCASE
+Mod : UPCASE.OBJ
+Decl: DECLARE SUB Upcase (St$)
+Type: String
+Desc: Convert a string to uppercase (U.S. only)
+
+Name: UPCASE1
+Mod : UPCASE1.OBJ
+Decl: DECLARE SUB Upcase1 (St$)
+Type: String
+Desc: Convert a string to uppercase (international)
+
+Name: UPCASEI
+Mod : UPCASEI.OBJ
+Decl: DECLARE FUNCTION UpcaseI% (BYVAL Ch%)
+Type: String
+Desc: Convert an ASCII code to uppercase (U.S. only)
+
+Name: UPCASEI1
+Mod : UPCASEI1.OBJ
+Decl: DECLARE FUNCTION UpcaseI1% (BYVAL Ch%)
+Type: String
+Desc: Convert an ASCII code to uppercase (international)
+
+Name: UPDTVSCREEN
+Mod : UPDTVSCR.OBJ
+Decl: DECLARE SUB UpdTVScreen (BYVAL DSeg%, BYVAL DOfs%)
+Type: Display
+Desc: Update the display from a screen buffer in TopView and compatibles
+
+Name: VGAREST13
+Mod : VGARES13.OBJ
+Decl: DECLARE SUB VGARest13 (BYVAL DSeg%, BYVAL DOfs%)
+Type: Display
+Desc: Restore a saved VGA graphics display (SCREEN 13)
+
+Name: VGASAVE13
+Mod : VGASAV13.OBJ
+Decl: DECLARE SUB VGASave13 (BYVAL DSeg%, BYVAL DOfs%)
+Type: Display
+Desc: Save a VGA graphics display (SCREEN 13)
+
+Name: WEEKDAY0
+Mod : WEEKDAY0.OBJ
+Decl: DECLARE SUB WeekDay0 (DayNr%)
+Type: Time
+Desc: Get the current day of the week
+
+Name: WEEKDAY1
+Mod : WEEKDAY1.OBJ
+Decl: DECLARE SUB WeekDay1 (MonthNr%, DayNr%, YearNr%, DayName$)
+Type: Time
+Desc: Get the day of the week for a specified date
+
+Name: WINCHECK
+Mod : WINCHECK.OBJ
+Decl: DECLARE SUB WinCheck (MajorVersion%, MinorVersion%)
+Type: Equipment
+Desc: Get the Windows version
+
+Name: WINDOWMAN2
+Mod : WINDMAN2.OBJ
+Decl: DECLARE SUB WindowMan2 (TopRow%, LeftCol%, BottomRow%, RightCol%, Frame%, FSt$, Fore%, Back%, Grow%, Shade%, TFore%, Title$, Page%, Fast%)
+Type: Display
+Desc: Display a pop-up window with user-defined frame
+
+Name: WINDOWMAN3
+Mod : WINDMAN3.OBJ
+Decl: DECLARE SUB WindowMan3 (ParmList%(), Title$)
+Type: Display
+Desc: Display a pop-up window
+
+Name: WINDOWMAN4
+Mod : WINDMAN4.OBJ
+Decl: DECLARE SUB WindowMan4 (TopRow%, LeftCol%, BottomRow%, RightCol%, Frame%, VAttr%, Page%, Fast%)
+Type: Display
+Desc: Display a window frame
+
+Name: WINDOWMANAGER
+Mod : WINDMAN.OBJ
+Decl: DECLARE SUB WindowManager (TopRow%, LeftCol%, BottomRow%, RightCol%, Frame%, Fore%, Back%, Grow%, Shade%, TFore%, Title$, Page%, Fast%)
+Type: Display
+Desc: Display a pop-up window
+
+Name: WRITEBITF
+Mod : WRITBITF.OBJ
+Decl: DECLARE SUB WriteBitF (BYVAL DSeg%, BYVAL DOfs%, ElementNr&, BYVAL BitLen%, BYVAL Value%)
+Type: Numeric
+Desc: Write a value of a specified bit length into an array
+
+Name: XLATE
+Mod : XLATE.OBJ
+Decl: DECLARE SUB Xlate (St$, TranslationTable$)
+Type: String
+Desc: Run each character of a string through a translation table
+
+Name: XMPRINT
+Mod : XMPRINT.OBJ
+Decl: DECLARE SUB XMPrint (St$, TranslationTable$, Row%, Column%)
+Type: Display
+Desc: Display text via DOS services after applying a translation table
+
+Name: XORST
+Mod : XORST.OBJ
+Decl: DECLARE SUB XorSt (St1$, St2$)
+Type: String
+Desc: XOR the bytes in one string with those in another
+
+Name: XQPRINT
+Mod : XQPRINT.OBJ
+Decl: DECLARE SUB XQPrint (St$, BYVAL Row%, BYVAL Column%, BYVAL VAttr%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Display text
+
+Name: XQPRINTOVER
+Mod : XQPRINTO.OBJ
+Decl: DECLARE SUB XQPrintOver (St$, BYVAL Row%, BYVAL Column%, BYVAL VAttr%, BYVAL Page%, BYVAL Fast%)
+Type: Display
+Desc: Display text, except for spaces, which act only as place holders
+
+Name: ANYLOWERCASE
+Mod : OBJSCAN.OBJ
+Type: PRIVATE
+
+Name: CRITDONE
+Mod : CRITERR.OBJ
+Type: PRIVATE
+
+Name: CRITERROR
+Mod : CRITERR.OBJ
+Type: PRIVATE
+
+Name: CRITINIT
+Mod : CRITERR.OBJ
+Type: PRIVATE
+
+Name: FILENAME
+Mod : FILENAME.OBJ
+Type: PRIVATE
+
+Name: FONTROW0
+Mod : FONTROW0.OBJ
+Type: PRIVATE
+
+Name: GETARC00
+Mod : ARC00.OBJ
+Type: PRIVATE
+
+Name: GETSERIAL00
+Mod : GETSER00.OBJ
+Type: PRIVATE
+
+Name: GETSINPUT00
+Mod : SINPUTSE.OBJ
+Type: PRIVATE
+
+Name: GETSINPUT01
+Mod : SINPUTSE.OBJ
+Type: PRIVATE
+
+Name: GETSINPUT02
+Mod : SINPUTSE.OBJ
+Type: PRIVATE
+
+Name: NAMECASE00
+Mod : NAMECASE.OBJ
+Type: PRIVATE
+
+Name: PARSEFNAME
+Mod : PARSFNAM.OBJ
+Type: PRIVATE
+
+Name: PATCH00
+Mod : PATCH00.OBJ
+Type: PRIVATE
+
+Name: PATCH01
+Mod : PATCH00.OBJ
+Type: PRIVATE
+
+Name: SETARC00
+Mod : ARC00.OBJ
+Type: PRIVATE
+
+Name: SETLABEL00
+Mod : SETLAB00.OBJ
+Type: PRIVATE
+
+Name: SETLABEL01
+Mod : SETLAB00.OBJ
+Type: PRIVATE
