@@ -1,0 +1,144 @@
+BKSCROLL..........bkscroll          CALCATTR..........calcattr
+CHECKDOSERROR.....mhmiscpx          CHECKEGA2.........display
+CHECKMONITOR......display           CLOCK.............clock
+CLOCKSET..........clock             CLOSEHANDLE.......displayg
+COLDATA...........displayg          COLUMNS...........display
+COMMONREAD........displayg          COMMONREAD2.......displayg
+COPYBUFFER........displayg          CRITDONE..........criterr
+CRITERROR.........criterr           CRITICALERR.......criterr
+CRITINIT..........criterr           DATABUFFER........display
+DATEDIF...........datefn            DAYMATH...........datefn
+DAYWEEK...........datefn            DTAP..............mhmiscpx
+ENTRYD............entry             ENTRYN............entry
+ENTRYS............entry             ENTRYT............entry
+ENTRYU............entry             ENTRYX............entry
+FATAL.............mhmiscpx          FILECOUNT.........filcount
+FILENAME..........filename          FJULIAN...........datefn
+FOFFSETHIGH.......displayg          FOFFSETLOW........displayg
+GDEBUG............displayg          HIGHLENGTH........displayg
+HIGHOFFSET........displayg          INDEXDATA.........displayg
+INDEXNAME.........displayg          INDEXNAMELEN......displayg
+INTERNALDISPATCH..display           INTERRUPT.........intrpt
+INTERRUPTX........intrpt            ISMODTABLE........display
+ISOURPROGRAM......displayg          JUNK..............displayg
+LENA0.............displayg          LIBHANDLE.........displayg
+LOADDIR...........loaddir           LOCALDATA.........displayg
+LOWLENGTH.........displayg          LOWOFFSET.........displayg
+LSCROLL...........lscroll           MHALTCOLOROFF.....display
+MHALTCOLORON......display           MHBIOSOFF.........display
+MHBIOSON..........display           MHBLINKOFF........display
+MHBLINKON.........display           MHCLOSESCREENLIB..displayg
+MHDISPLAYBYNAME...displayg          MHDISPLAYBYNUMBER..displayg
+MHFETCHVALUES.....display           MHFXINFO..........display
+MHMONOOFF.........display           MHMONOON..........display
+MHOPENSCREENLIB...displayg          MHSETCOLORTABLE...display
+MHSETSEG..........display           MHSETSHADOWCOLUMNS..display
+MHSHADOWOFF.......display           MHSHADOWON........display
+MHSNOWOFF.........display           MHSNOWON..........display
+MHTRANSPARENT.....display           MHVALUESONLYON....display
+MODCOLORTABLE.....display           MODULELENHIGH.....displayg
+MODULELENLOW......displayg          MODULESIG.........displayg
+MODULETYPE........displayg          MONMATH...........datefn
+MYDATA............displayg          NSDELAY...........display
+NULLPRT...........printscr          PARSEFNAME........parsfnam
+PICTURE...........entry             PRINTERREADY......prtready
+PRINTSCREEN.......printscr          PRTSC.............printscr
+PULLSEGMENTEDVARIABLES..mhmiscpx    PULLVARIABLES.....mhmiscpx
+PUSHMOVE..........display           QPRINT............qprint
+RECORDA0..........displayg          RELEASEERRORVECTOR..mhmiscpx
+ROWS..............display           RSCROLL...........rscroll
+SCREENDISPATCH....display           SCROLL............scroll
+SEARCHINDEX.......displayg          SETERRORVECTOR....mhmiscpx
+SNOWCHECK.........display           STANDARDPOP.......mhmiscpx
+STANDARDPUSH......mhmiscpx          TIMINGLOOP........display
+TJULIAN...........datefn            UCASE.............display
+UNCALCATTR........uncalcat          USERFILELENGTH....displayg
+USERFILENAME......displayg          VIDEOPAGE.........display
+VIDEOSEGMENT......display           XQPRINT...........xqprint
+_GETSTRINGINFO....mhmiscpx          
+
+scroll            Offset: 00000010H  Code and data size: 42H
+  SCROLL          
+
+bkscroll          Offset: 000000d0H  Code and data size: 44H
+  BKSCROLL        
+
+display           Offset: 000001a0H  Code and data size: 37f6H
+  CHECKEGA2         CHECKMONITOR      COLUMNS           DATABUFFER
+  INTERNALDISPATCH  ISMODTABLE        MHALTCOLOROFF     MHALTCOLORON
+  MHBIOSOFF         MHBIOSON          MHBLINKOFF        MHBLINKON
+  MHFETCHVALUES     MHFXINFO          MHMONOOFF         MHMONOON
+  MHSETCOLORTABLE   MHSETSEG          MHSETSHADOWCOLUMNS
+  MHSHADOWOFF       MHSHADOWON        MHSNOWOFF         MHSNOWON
+  MHTRANSPARENT     MHVALUESONLYON    MODCOLORTABLE     NSDELAY
+  PUSHMOVE          ROWS              SCREENDISPATCH    SNOWCHECK
+  TIMINGLOOP        UCASE             VIDEOPAGE         VIDEOSEGMENT
+
+displayg          Offset: 00001060H  Code and data size: 383eH
+  CLOSEHANDLE       COLDATA           COMMONREAD        COMMONREAD2
+  COPYBUFFER        FOFFSETHIGH       FOFFSETLOW        GDEBUG
+  HIGHLENGTH        HIGHOFFSET        INDEXDATA         INDEXNAME
+  INDEXNAMELEN      ISOURPROGRAM      JUNK              LENA0
+  LIBHANDLE         LOCALDATA         LOWLENGTH         LOWOFFSET
+  MHCLOSESCREENLIB  MHDISPLAYBYNAME   MHDISPLAYBYNUMBER
+  MHOPENSCREENLIB   MODULELENHIGH     MODULELENLOW      MODULESIG
+  MODULETYPE        MYDATA            RECORDA0          SEARCHINDEX
+  USERFILELENGTH    USERFILENAME    
+
+intrpt            Offset: 00001c70H  Code and data size: 111H
+  INTERRUPT         INTERRUPTX      
+
+mhmiscpx          Offset: 00001e50H  Code and data size: 106H
+  CHECKDOSERROR     DTAP              FATAL             PULLSEGMENTEDVARIABLES
+  PULLVARIABLES     RELEASEERRORVECTOR                  SETERRORVECTOR
+  STANDARDPOP       STANDARDPUSH      _GETSTRINGINFO  
+
+datefn            Offset: 000020b0H  Code and data size: 6f8H
+  DATEDIF           DAYMATH           DAYWEEK           FJULIAN
+  MONMATH           TJULIAN         
+
+lscroll           Offset: 00002ff0H  Code and data size: 98H
+  LSCROLL         
+
+rscroll           Offset: 00003140H  Code and data size: 92H
+  RSCROLL         
+
+qprint            Offset: 00003290H  Code and data size: 8bH
+  QPRINT          
+
+calcattr          Offset: 000033b0H  Code and data size: 24H
+  CALCATTR        
+
+uncalcat          Offset: 00003440H  Code and data size: 29H
+  UNCALCATTR      
+
+xqprint           Offset: 000034d0H  Code and data size: 8fH
+  XQPRINT         
+
+prtready          Offset: 00003600H  Code and data size: 34H
+  PRINTERREADY    
+
+printscr          Offset: 000036a0H  Code and data size: 78H
+  NULLPRT           PRINTSCREEN       PRTSC           
+
+criterr           Offset: 000037d0H  Code and data size: 66H
+  CRITDONE          CRITERROR         CRITICALERR       CRITINIT
+
+filename          Offset: 00003930H  Code and data size: 50H
+  FILENAME        
+
+parsfnam          Offset: 000039a0H  Code and data size: 1dH
+  PARSEFNAME      
+
+filcount          Offset: 00003a60H  Code and data size: f2H
+  FILECOUNT       
+
+loaddir           Offset: 00003c60H  Code and data size: f3H
+  LOADDIR         
+
+entry             Offset: 00003e50H  Code and data size: 14cbH
+  ENTRYD            ENTRYN            ENTRYS            ENTRYT
+  ENTRYU            ENTRYX            PICTURE         
+
+clock             Offset: 00006900H  Code and data size: 27aH
+  CLOCK             CLOCKSET        
